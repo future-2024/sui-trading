@@ -27,6 +27,10 @@
     color: white;
     display: inline-block;
     cursor: pointer;
+    font-weight: bold;
+}
+.referral-button:hover {
+    background-image: linear-gradient(to right, #6552debd, rgba(246, 108, 198, 0.786), #ff6f6fb8);
 }
 
 @media only screen and (max-width: 480px) {

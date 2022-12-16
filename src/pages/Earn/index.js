@@ -24,17 +24,17 @@ const Earn = (props) => {
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
 
     return (
-        <div className='py-5'>
+        <div className='py-5 px-5'>
             <div className='container'>
                 <div>
-                    <h4 className='text-white px-3'>Earn</h4>
-                    <p className='text-gray px-3'>Stake GMX and GLP to earn rewards.</p>
+                    <h4 className='text-white'>Earn</h4>
+                    <p className='text-gray'>Stake GMX and GLP to earn rewards.</p>
                 </div>
                 <div>
                     <div className='box pt-4 d-flex justify-content-between flex-wrap'>
                         <div className='box-item'>
                             <div>
-                                <h5 className='text-white pt-3 pl-5'>GMX</h5>
+                                <h5 className='text-white pt-3 pl-4'>GMX</h5>
                                 <hr className='text-gray'/>
                             </div>
                             <div className='box-item-body-1 d-flex flex-column justify-content-between'>
@@ -97,7 +97,7 @@ const Earn = (props) => {
                         </div>
                         <div className='box-item'>
                             <div>
-                                <h5 className='text-white pt-3 pl-5'>Total Rewards</h5>
+                                <h5 className='text-white pt-3 pl-4'>Total Rewards</h5>
                                 <hr className='text-gray'/>
                             </div>
                             <div className='box-item-body-1 d-flex flex-column justify-content-between'>
@@ -146,7 +146,7 @@ const Earn = (props) => {
                     <div className='box pt-4 d-flex justify-content-between flex-wrap'>
                         <div className='box-item'>
                             <div>
-                                <h5 className='text-white pt-3 pl-5'>GLP (Arbitrum)</h5>
+                                <h5 className='text-white pt-3 pl-4'>GLP (Arbitrum)</h5>
                                 <hr className='text-gray'/>
                             </div>
                             <div className='box-item-body-2 d-flex flex-column justify-content-between'>
@@ -200,7 +200,7 @@ const Earn = (props) => {
                         </div>
                         <div className='box-item'>
                             <div>
-                                <h5 className='text-white pt-3 pl-5'>Escrowed GMX</h5>
+                                <h5 className='text-white pt-3 pl-4'>Escrowed GMX</h5>
                                 <hr className='text-gray'/>
                             </div>
                             <div className='box-item-body-2 d-flex flex-column justify-content-between'>
@@ -254,13 +254,13 @@ const Earn = (props) => {
                     </div>
                 </div>
                 <div className='pt-5'>
-                    <h4 className='text-white px-3'>Vestor</h4>
-                    <p className='text-gray px-3'>Convert esGMX tokens to GMX tokens.Please read the vesting details before using the vaults.</p>
+                    <h4 className='text-white'>Vestor</h4>
+                    <p className='text-gray'>Convert esGMX tokens to GMX tokens.Please read the vesting details before using the vaults.</p>
                     <div>
                         <div className='box pt-4 d-flex justify-content-between flex-wrap'>
                             <div className='box-item'>
                                 <div>
-                                    <h5 className='text-white pt-3 pl-5'>GMX Vault</h5>
+                                    <h5 className='text-white pt-3 pl-4'>GMX Vault</h5>
                                     <hr className='text-gray'/>
                                 </div>
                                 <div className='box-item-body-3 d-flex flex-column justify-content-between'>
@@ -295,7 +295,7 @@ const Earn = (props) => {
                             </div>
                             <div className='box-item'>
                                 <div>
-                                    <h5 className='text-white pt-3 pl-5'>GLP Vault</h5>
+                                    <h5 className='text-white pt-3 pl-4'>GLP Vault</h5>
                                     <hr className='text-gray'/>
                                 </div>
                                 <div className='box-item-body-3 d-flex flex-column justify-content-between'>

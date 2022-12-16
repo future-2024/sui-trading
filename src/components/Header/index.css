@@ -62,7 +62,7 @@ p {
 .nav-menu > div {    
     padding: 5px 12px;
 }
-@media only screen and (max-width: 1680px) {
+@media only screen and (max-width: 1480px) {
     .w-80 {
         width: 90%;
     }

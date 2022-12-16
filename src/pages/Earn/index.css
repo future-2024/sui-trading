@@ -24,6 +24,10 @@
     align-items: center;
     border: none;
 }
+.earn-button:hover {
+    background-image: linear-gradient(to right, #6552debd, rgba(246, 108, 198, 0.786), #ff6f6fb8);
+    transition: 0.5s;
+}
 .box-item-body-1 {
     height: 73vh;
 }

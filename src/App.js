@@ -7,7 +7,7 @@ import './css/tailwind.output.css';
 import './font/font.css';
 import './css/fontawesome-free-6.0.0-beta3-web/css/fontawesome.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-notifications/lib/notifications.css';
 
 import Home from './pages/Home';
@@ -83,19 +83,19 @@ function App() {
             <hr className='text-gray my-2'/>
             <div>
               <div className='d-flex wallet-item justify-content-between'>
-                  <div className='ml-4 align-self-center'>
+                  <div className='ml-2 align-self-center'>
                       <h5 className='text-white text-left'>Suiet</h5>
                   </div>
                   <img src={Suiet} width={35} />
               </div>
               <div className='d-flex wallet-item justify-content-between'>
-                  <div className='ml-4 align-self-center'>
+                  <div className='ml-2 align-self-center'>
                       <h5 className='text-white text-left'>Martian</h5>
                   </div>
                   <img src={Martian} width={35} />
               </div>
               <div className='d-flex wallet-item justify-content-between'>
-                  <div className='ml-4 align-self-center'>
+                  <div className='ml-2 align-self-center'>
                       <h5 className='text-white text-left'>SUI wallet</h5>
                   </div>
                   <img src={SUI} width={35} />
