@@ -25,5 +25,9 @@
     border: 1px solid rgba(161, 161, 161, 0.16);
     margin: 5px 0px;
     padding: 5px 15px;
+    cursor: pointer;
+}
+.token-item:hover {
+    background-color: rgba(0, 0, 0, 0.296);
 }
 

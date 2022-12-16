@@ -6,20 +6,28 @@
     padding: 0 12px;
 }
 .button {
-    background-image: linear-gradient(to right, #6452DE , #F66CC5,#FF6F6F);
-    padding: 6px 10px;
-    border-radius: 18px;
+    background-color: rgba(22, 22, 22, 0.171);
+    padding: 2px 6px;
+    border-radius: 8px;
     color: white;
     font-size: 15px;
     cursor: pointer;    
+    border: 2px solid rgba(204, 204, 204, 0.477);
 }
-.button:hover{
-    background-image: linear-gradient(to right, #6552debc , #f66cc6a0,#ff6f6f95);
+.button:hover{    
+    background-color: rgba(22, 22, 22, 0.632);
     transition-duration: 500ms;
+}
+.fs-18 {
+    font-size: 20px;
 }
 .logo {
     margin-right: 15px;
     min-width: 38px;
+}
+.wallet {
+    width: 25px;
+    height: 25px;
 }
 .circle {
     width: 27px;
@@ -61,6 +69,9 @@ p {
 }
 .nav-menu > div {    
     padding: 5px 12px;
+}
+.lh-33 {
+    line-height: 28px;
 }
 @media only screen and (max-width: 1480px) {
     .w-80 {

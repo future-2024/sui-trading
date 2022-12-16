@@ -2,10 +2,11 @@ body {
   background-color: #241F3E!important;
 }
 .wallet-item {
-  border: 1px solid rgba(198, 198, 198, 0.16);
-  margin: 5px 0px;
+  border: 2px solid rgba(230, 230, 230, 0.484);
+  margin: 10px 0px;
   padding: 8px 15px;
   cursor: pointer;
+  border-radius: 35px;
 }
 .wallet-item:hover {
   background-color: #3d3467;

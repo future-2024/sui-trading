@@ -33,7 +33,9 @@ const customStyles = {
     width: '300px',
     transform: 'translate(-50%, -50%)',
     backgroundColor: '#342D55',
-    padding: '10px 20px'
+    padding: '10px 20px',
+    borderRadius: '9px',
+    border: 'none'
   },
   overlay: {
     backgroundColor: 'rgb(0 0 0 / 86%)'
@@ -80,25 +82,29 @@ function App() {
               <h5 className='text-white my-auto'>Connect Wallet</h5>
               <h4 className='text-white cursor-pointer' onClick={() => setModalIsOpen(false)}>x</h4>
             </div>
-            <hr className='text-gray my-2'/>
+            <div className='py-3'>
+              <p className='text-white'>
+                To continue working with the site, you need to connect a wallet and allow the site access to your account.
+              </p>
+            </div>
             <div>
-              <div className='d-flex wallet-item justify-content-between'>
-                  <div className='ml-2 align-self-center'>
-                      <h5 className='text-white text-left'>Suiet</h5>
+              <div className='d-flex wallet-item'>                  
+                <img src={Suiet} width={35} />
+                  <div className='ml-3 align-self-center'>
+                      <h6 className='text-white text-left'>Suiet</h6>
                   </div>
-                  <img src={Suiet} width={35} />
               </div>
-              <div className='d-flex wallet-item justify-content-between'>
-                  <div className='ml-2 align-self-center'>
-                      <h5 className='text-white text-left'>Martian</h5>
-                  </div>
+              <div className='d-flex wallet-item'>
                   <img src={Martian} width={35} />
-              </div>
-              <div className='d-flex wallet-item justify-content-between'>
-                  <div className='ml-2 align-self-center'>
-                      <h5 className='text-white text-left'>SUI wallet</h5>
+                  <div className='ml-3 align-self-center'>
+                      <h6 className='text-white text-left'>Martian</h6>
                   </div>
+              </div>
+              <div className='d-flex wallet-item'>
                   <img src={SUI} width={35} />
+                  <div className='ml-3 align-self-center'>
+                      <h6 className='text-white text-left'>SUI wallet</h6>
+                  </div>
               </div>
             </div>
           </div>

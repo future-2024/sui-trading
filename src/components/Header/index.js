@@ -10,8 +10,9 @@ import './index.css';
 import Logo from '../../img/quotation/logo.png';
 import { useMediaQuery } from 'react-responsive';
 import { FaList } from 'react-icons/fa';
-
+import { BsTextareaResize } from "react-icons/bs";
 import { StoreContext } from '../../store';
+import WalletIcon from '../../img/quotation/wallet.png';
 
 const Header = () => {
     const history = useHistory();    
@@ -76,7 +77,7 @@ const Header = () => {
                         )}
                     </div>  
                     <div>
-                        <div className='button d-flex' onClick={connectWallet}><div className='circle mr-2'></div><p className='mb-0'>Connect Wallet</p></div>
+                        <div className='button d-flex' onClick={connectWallet}><div className='align-self-center'><img src={WalletIcon} className='wallet' /></div><p className='mb-0 ml-1 lh-33 align-self-center'>Connect Wallet</p></div>
                     </div>  
                 </div>
             </div>

@@ -81,7 +81,7 @@ const Home = (props) => {
                 <div className='stats pt-5'>
                     <div className='px-4'>
                         <h4 className='text-white font-bold'>Stats</h4>
-                        <p>Arbitrum Total Stats start from 01 Sep 2021 <br/>For detailed stats: https://stats.gmx.io.</p>
+                        <p>Arbitrum Total Stats start from 01 Sep 2021 <br/>For detailed stats: https://stats.TRY.io.</p>
                     </div>
                     <div className='d-flex px-4 justify-content-between flex-wrap'>
                         <div className='overview mt-3 w-1'>
@@ -160,8 +160,8 @@ const Home = (props) => {
                             <div className='d-flex py-3 px-4'>
                                 <img src={TokenIcon1} width={35} />
                                 <div className='px-2'>
-                                    <h6 className='text-white mb-0'>GMX</h6>
-                                    <p className='fs-12 text-gray'>GMX</p>
+                                    <h6 className='text-white mb-0'>TRY</h6>
+                                    <p className='fs-12 text-gray'>Tradeify coin</p>
                                 </div>
                                 <div className='pt-1'>
                                     <FaAngleDown className='text-white' />
@@ -177,7 +177,7 @@ const Home = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-2'>
                                             <h6 className='text-gray'>Supply</h6>
-                                            <h6 className='text-white'>8,307,163 GMX</h6>
+                                            <h6 className='text-white'>8,307,163 TRY</h6>
                                         </div>
                                         <div className='d-flex justify-content-between py-2'>
                                             <h6 className='text-gray'>Total Staked</h6>
@@ -188,9 +188,9 @@ const Home = (props) => {
                                             <h6 className='text-white'>$453,984,472</h6>
                                         </div>
                                     </div>
-                                    <div className='align-self-center donut px-0'>
+                                    {/* <div className='align-self-center donut px-0'>
                                         <Chart options={option1} series={series1} type="donut"  width="300"/>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -199,8 +199,8 @@ const Home = (props) => {
                             <div className='d-flex py-3 px-4'>
                                 <img src={TokenIcon2} width={35} />
                                 <div className='px-2'>
-                                    <h6 className='text-white mb-0'>GMX</h6>
-                                    <p className='fs-12 text-gray'>GMX</p>
+                                    <h6 className='text-white mb-0'>GLP</h6>
+                                    <p className='fs-12 text-gray'>GLP</p>
                                 </div>
                                 <div className='pt-1'>
                                     <FaAngleDown className='text-white' />
@@ -216,7 +216,7 @@ const Home = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-2'>
                                             <h6 className='text-gray'>Supply</h6>
-                                            <h6 className='text-white'>8,307,163 GMX</h6>
+                                            <h6 className='text-white'>8,307,163 TRY</h6>
                                         </div>
                                         <div className='d-flex justify-content-between py-2'>
                                             <h6 className='text-gray'>Total Staked</h6>
@@ -227,9 +227,9 @@ const Home = (props) => {
                                             <h6 className='text-white'>$453,984,472</h6>
                                         </div>
                                     </div>
-                                    <div className='align-self-center donut px-0'>
+                                    {/* <div className='align-self-center donut px-0'>
                                         <Chart options={option2} series={series2} type="donut"  width="300"/>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

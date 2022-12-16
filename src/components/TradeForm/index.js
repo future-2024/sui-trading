@@ -24,6 +24,7 @@ import TokenIcon3 from '../../img/quotation/eth-bg.png';
 const TradeForm = () => {
     const global = useContext(StoreContext);
     const [formIndex, setFormIndex] = useState(1);
+    const [optionIndex, setOptionIndex] = useState(1);
     const [isTokenMenu, setIsTokenMenu] = useState(false);
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
     const connectWallet = () => {
@@ -41,9 +42,9 @@ const TradeForm = () => {
                     <div>
                         <div>
                             <div className='trade-form-select d-flex'>
-                                <div><p className='text-white'>Market</p></div>
-                                <div><p className='text-white'>Limit</p></div>
-                                <div><p className='text-white'>Trigger</p></div>
+                                <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
+                                <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div>
+                                {/* <div><p className='text-white'>Trigger</p></div> */}
                             </div>
                             <div className='trade-token-select mb-2'>
                                 <p className='text-gray text-left'>Pay</p>
@@ -60,6 +61,15 @@ const TradeForm = () => {
                                     <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h4>ETH</h4><FaAngleDown className='fs-26 mt-2' /></div>
                                 </div>
                             </div>
+                            {optionIndex == 2 && (
+                                <div className='trade-token-select mt-2'>
+                                    <div className='d-flex justify-content-between'><p className='text-gray text-left'>Price</p><p className='text-gray text-left'>Mark: 1233.23</p></div>
+                                    <div className='d-flex justify-content-between'>
+                                        <input type='text' className='token-select-input' placeholder='0.0' />
+                                        <div className='d-flex cursor-pointer token-select'><h4>USD</h4></div>
+                                    </div>
+                                </div>
+                            )}
                             <div>
                                 <p className='text-left pt-2'>Leverage slider</p>
                                 <div className='pt-3'>
@@ -106,9 +116,9 @@ const TradeForm = () => {
                 {formIndex == 2 && (
                     <div>
                         <div className='trade-form-select d-flex'>
-                            <div><p className='text-white'>Market</p></div>
-                            <div><p className='text-white'>Limit</p></div>
-                            <div><p className='text-white'>Trigger</p></div>
+                            <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
+                            <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div>
+                            {/* <div><p className='text-white'>Trigger</p></div> */}
                         </div>
                         <div className='trade-token-select mb-2'>
                             <p className='text-gray text-left'>Pay</p>
@@ -125,6 +135,15 @@ const TradeForm = () => {
                                 <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h4>ETH</h4><FaAngleDown className='fs-26 mt-2' /></div>
                             </div>
                         </div>
+                        {optionIndex == 2 && (
+                            <div className='trade-token-select mt-2'>
+                                <div className='d-flex justify-content-between'><p className='text-gray text-left'>Price</p><p className='text-gray text-left'>Mark: 1233.23</p></div>
+                                <div className='d-flex justify-content-between'>
+                                    <input type='text' className='token-select-input' placeholder='0.0' />
+                                    <div className='d-flex cursor-pointer token-select'><h4>USD</h4></div>
+                                </div>
+                            </div>
+                        )}
                         <div>
                             <p className='text-left pt-2'>Leverage slider</p>
                             <div className='pt-3'>
@@ -170,8 +189,8 @@ const TradeForm = () => {
                 {formIndex == 3 && (
                     <div>
                         <div className='trade-form-select d-flex'>
-                            <div><p className='text-white'>Market</p></div>
-                            <div><p className='text-white'>Limit</p></div>
+                            <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
+                            <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div>
                         </div>
                         <div className='trade-token-select mb-2'>
                             <p className='text-gray text-left'>Pay</p>
@@ -188,6 +207,15 @@ const TradeForm = () => {
                                 <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h4>ETH</h4><FaAngleDown className='fs-26 mt-2' /></div>
                             </div>
                         </div>
+                        {optionIndex == 2 && (
+                            <div className='trade-token-select mt-2'>
+                                <div className='d-flex justify-content-between'><p className='text-gray text-left'>Price</p><p className='text-gray text-left'>Mark: 1233.23</p></div>
+                                <div className='d-flex justify-content-between'>
+                                    <input type='text' className='token-select-input' placeholder='0.0' />
+                                    <div className='d-flex cursor-pointer token-select'><h4>USD Per ETH</h4></div>
+                                </div>
+                            </div>
+                        )}
                         <div className='d-flex justify-content-between'>
                             <p className='text-left pt-2'>Fees</p>
                             <p className='text-gray pt-2'>--</p>

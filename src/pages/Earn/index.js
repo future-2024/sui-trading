@@ -28,13 +28,13 @@ const Earn = (props) => {
             <div className='container'>
                 <div>
                     <h4 className='text-white'>Earn</h4>
-                    <p className='text-gray'>Stake GMX and GLP to earn rewards.</p>
+                    <p className='text-gray'>Stake TRY and GLP to earn rewards.</p>
                 </div>
                 <div>
                     <div className='box pt-4 d-flex justify-content-between flex-wrap'>
                         <div className='box-item'>
                             <div>
-                                <h5 className='text-white pt-3 pl-4'>GMX</h5>
+                                <h5 className='text-white pt-3 pl-4'>TRY</h5>
                                 <hr className='text-gray'/>
                             </div>
                             <div className='box-item-body-1 d-flex flex-column justify-content-between'>
@@ -46,7 +46,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Wallet</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Staked</p>
@@ -61,7 +61,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Rewards</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Multiplier Points APR</p>
@@ -80,14 +80,14 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Total Supply</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div>
                                     <hr className='text-gray mx-4'/>
                                     <div className='d-flex justify-content-between px-4 py-3 pt-0 flex-wrap'>
-                                        <div className='earn-button'>Buy GMX</div>
+                                        <div className='earn-button'>Buy TRY</div>
                                         <div className='earn-button'>Stake</div>
                                         <div className='earn-button'>Unstake</div>
                                         <div className='earn-button'>Transfer Account</div>
@@ -108,11 +108,11 @@ const Earn = (props) => {
                                             <p className='text-white'>$80.4</p>
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
-                                            <p className='text-gray'>GMX</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-gray'>TRY</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
-                                            <p className='text-gray'>Escrowed GMX</p>
+                                            <p className='text-gray'>Escrowed TRY</p>
                                             <p className='text-white'>$801,951,732</p>
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
@@ -121,7 +121,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>staked Multiplier Points</p>
-                                            <p className='text-white'>801,951,732 GMX</p>
+                                            <p className='text-white'>801,951,732 TRY</p>
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Mulitplier Points APR</p>
@@ -158,7 +158,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Wallet</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Staked</p>
@@ -173,7 +173,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Rewards</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                         <hr className='text-gray'/>
                                     </div>
@@ -184,7 +184,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Total Supply</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                     </div>
                                 </div>
@@ -200,7 +200,7 @@ const Earn = (props) => {
                         </div>
                         <div className='box-item'>
                             <div>
-                                <h5 className='text-white pt-3 pl-4'>Escrowed GMX</h5>
+                                <h5 className='text-white pt-3 pl-4'>Escrowed TRY</h5>
                                 <hr className='text-gray'/>
                             </div>
                             <div className='box-item-body-2 d-flex flex-column justify-content-between'>
@@ -212,7 +212,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Wallet</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Staked</p>
@@ -227,7 +227,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Rewards</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                         <hr className='text-gray'/>
                                     </div>
@@ -238,7 +238,7 @@ const Earn = (props) => {
                                         </div>
                                         <div className='d-flex justify-content-between py-1'>
                                             <p className='text-gray'>Total Supply</p>
-                                            <p className='text-white'>8,307,163 GMX</p>
+                                            <p className='text-white'>8,307,163 TRY</p>
                                         </div>
                                     </div>
                                 </div>
@@ -255,12 +255,12 @@ const Earn = (props) => {
                 </div>
                 <div className='pt-5'>
                     <h4 className='text-white'>Vestor</h4>
-                    <p className='text-gray'>Convert esGMX tokens to GMX tokens.Please read the vesting details before using the vaults.</p>
+                    <p className='text-gray'>Convert esTRY tokens to TRY tokens.Please read the vesting details before using the vaults.</p>
                     <div>
                         <div className='box pt-4 d-flex justify-content-between flex-wrap'>
                             <div className='box-item'>
                                 <div>
-                                    <h5 className='text-white pt-3 pl-4'>GMX Vault</h5>
+                                    <h5 className='text-white pt-3 pl-4'>TRY Vault</h5>
                                     <hr className='text-gray'/>
                                 </div>
                                 <div className='box-item-body-3 d-flex flex-column justify-content-between'>
@@ -272,7 +272,7 @@ const Earn = (props) => {
                                             </div>
                                             <div className='d-flex justify-content-between py-1'>
                                                 <p className='text-gray'>Reserverd for Vesting</p>
-                                                <p className='text-white'>8,307,163 GMX</p>
+                                                <p className='text-white'>8,307,163 TRY</p>
                                             </div>
                                             <div className='d-flex justify-content-between py-1'>
                                                 <p className='text-gray'>Vesting Status</p>
@@ -307,7 +307,7 @@ const Earn = (props) => {
                                             </div>
                                             <div className='d-flex justify-content-between py-1'>
                                                 <p className='text-gray'>Reserverd for Vesting</p>
-                                                <p className='text-white'>8,307,163 GMX</p>
+                                                <p className='text-white'>8,307,163 TRY</p>
                                             </div>
                                             <div className='d-flex justify-content-between py-1'>
                                                 <p className='text-gray'>Vesting Status</p>
