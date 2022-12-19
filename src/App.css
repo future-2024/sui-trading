@@ -1,20 +1,20 @@
 body {
-  background-color: #241F3E!important;
+    background-color: #241F3E!important;
 }
 .wallet-item {
-  border: 2px solid rgba(230, 230, 230, 0.484);
-  margin: 10px 0px;
-  padding: 8px 15px;
-  cursor: pointer;
-  border-radius: 35px;
+    border: 2px solid rgba(230, 230, 230, 0.484);
+    margin: 10px 0px;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 35px;
 }
 .wallet-item:hover {
-  background-color: #3d3467;
+    background-color: #3d3467;
 }
 hr {
-  margin-top: 20px!important;
-  margin-bottom: 20px!important;
-  border: 0;
-  border-top: 1px solid #a9a9ca3d!important;
-  border-top: 1px solid var(--rs-border-primary);
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
+    border: 0;
+    border-top: 1px solid #a9a9ca3d!important;
+    border-top: 1px solid var(--rs-border-primary);
 }

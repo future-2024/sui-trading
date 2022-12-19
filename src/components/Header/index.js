@@ -1,18 +1,17 @@
 
 import React, { useState, useEffect, useContext } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {useHistory, useLocation} from 'react-router-dom';
-import $, { get } from 'jquery';
-import { ethers } from "ethers";
-import Web3 from 'web3';
+
 import './index.css';
 import Logo from '../../img/quotation/brand-logo.png';
+import WalletIcon from '../../img/quotation/wallet.png';
+
 import { useMediaQuery } from 'react-responsive';
 import { FaList } from 'react-icons/fa';
-import { BsTextareaResize } from "react-icons/bs";
 import { StoreContext } from '../../store';
-import WalletIcon from '../../img/quotation/wallet.png';
+import { useSuiWallet } from '../../context/ConnectWallet/useSuiWallet';
+import { ExportAddress } from '../../control/main';
 
 const Header = () => {
     const history = useHistory();    
@@ -22,6 +21,10 @@ const Header = () => {
     const [isShowModal, setIsShowModal] = useState(false);
     const [menuItem, setMenuItem] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
+
+    const { account, connected, connecting, connect, disconnect } = useSuiWallet();
+
+
     const showModal = () => {
         setIsMenu(true);
     }
@@ -32,8 +35,10 @@ const Header = () => {
     }
     const getItem = () => {        
         const path = location.pathname.split("/")[1];
-        console.log(path);
         setMenuItem(path);
+    }
+    const disconnectWallet = () => {
+        disconnect();
     }
     const connectWallet = () => {
         global.setModalIsOpen(true);
@@ -77,7 +82,12 @@ const Header = () => {
                         )}
                     </div>  
                     <div>
-                        <div className='button d-flex' onClick={connectWallet}><div className='align-self-center'><img src={WalletIcon} className='wallet' /></div><p className='mb-0 ml-1 lh-33 align-self-center'>Connect Wallet</p></div>
+                        {account == undefined && (
+                            <div className='button d-flex' onClick={connectWallet}><div className='align-self-center'><img src={WalletIcon} className='wallet' /></div><p className='mb-0 ml-1 lh-33 align-self-center'>Connect Wallet</p></div>
+                        )}
+                        {account != undefined && (
+                            <div className='button d-flex' onClick={disconnectWallet}><div className='align-self-center'><img src={WalletIcon} className='wallet' /></div><p className='mb-0 ml-1 lh-33 align-self-center'>{ExportAddress(account)}</p></div>
+                        )}
                     </div>  
                 </div>
             </div>

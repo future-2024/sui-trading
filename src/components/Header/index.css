@@ -80,8 +80,8 @@ p {
 }
 @media only screen and (max-width: 600px) {
     .logo > img {
-        width: 100px;
-        height: 27px;   
+        width: 30px;
+        height: 30px;   
     }
     .logo {
         min-width: 38px;

@@ -344,10 +344,10 @@ const Home = (props) => {
                                         <div>
                                             <div className='py-0'>
                                                 <div className='w-100 d-flex pl-3 pb-2'>
-                                                    <img src={TokenIcon1} width={40} height={20} />
+                                                    <img src={TokenIcon1} width={40} height={20}  className='token-logo'/>
                                                     <div className='pl-4'>
-                                                        <h6 className='mb-0'>Binance</h6>
-                                                        <p className='text-gray text-left'>BNB</p>
+                                                        <h6 className='mb-0'>Tradeify</h6>
+                                                        <p className='text-gray text-left'>TRY</p>
                                                     </div>
                                                     <FaAngleDown className='text-white mt-1 ml-3 cursor-pointer'/>
                                                 </div>

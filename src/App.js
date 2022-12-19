@@ -6,8 +6,6 @@ import './App.css';
 import './css/tailwind.output.css';
 import './font/font.css';
 import './css/fontawesome-free-6.0.0-beta3-web/css/fontawesome.css';
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-notifications/lib/notifications.css';
 
 import Home from './pages/Home';
@@ -18,10 +16,12 @@ import Header from './components/Header';
 
 import { ToastContainer, toast } from 'react-toastify';
 import { StoreContext } from './store';
+import { useSuiWallet } from './context/ConnectWallet/useSuiWallet';
 
 import Suiet from './img/quotation/suiet.png';
 import Martian from './img/quotation/martian.png';
 import SUI from './img/quotation/SUI.png';
+
 
 const customStyles = {
   content: {
@@ -43,25 +43,29 @@ const customStyles = {
 };
 
 function App() {
+  const { account, connected, connecting, connect, disconnect } = useSuiWallet();
+  const location = useLocation();
   const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
 
-  function closeModal() {
+  const closeModal = () => {
     setModalIsOpen(false);
   }
+  const handleConnect = async (value) => {
+    connect(value);
+    closeModal();
+  }
+  const storeValue = {
+    modalIsOpen, setModalIsOpen, account
+  }
 
-  const location = useLocation();
   useEffect(() => {
     localStorage.setItem('reward', 0);
   }, [location]);
 
-  const storeValue = {
-    modalIsOpen, setModalIsOpen
-  }
-
   return (
     <StoreContext.Provider value= {storeValue}>
-      <React.Fragment>       
+      <React.Fragment>  
         <Header />
         <Switch>       
           <Redirect from="/" exact to="/home" />
@@ -88,19 +92,19 @@ function App() {
               </p>
             </div>
             <div>
-              <div className='d-flex wallet-item'>                  
+              <div className='d-flex wallet-item' onClick={() => { handleConnect('suietWallet') }}>                  
                 <img src={Suiet} width={35} />
                   <div className='ml-3 align-self-center'>
                       <h6 className='text-white text-left'>Suiet</h6>
                   </div>
               </div>
-              <div className='d-flex wallet-item'>
+              <div className='d-flex wallet-item' onClick={() => { handleConnect('martianSuiWallet') }}>
                   <img src={Martian} width={35} />
                   <div className='ml-3 align-self-center'>
                       <h6 className='text-white text-left'>Martian</h6>
                   </div>
               </div>
-              <div className='d-flex wallet-item'>
+              <div className='d-flex wallet-item' onClick={() => { handleConnect('suiWallet') }}>
                   <img src={SUI} width={35} />
                   <div className='ml-3 align-self-center'>
                       <h6 className='text-white text-left'>SUI wallet</h6>
