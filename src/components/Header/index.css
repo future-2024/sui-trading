@@ -43,8 +43,8 @@ p {
     font-weight: bold;
 }
 .logo > img {
-    width: 100px;
-    height: 27px;
+    width: 35px;
+    height: 35px;
 }
 .nav-menu {
     background: rgba(23,24,44,.5333333333) 0 0 no-repeat padding-box;

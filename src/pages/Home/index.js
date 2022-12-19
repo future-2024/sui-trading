@@ -9,8 +9,7 @@ import Countdown from 'react-countdown';
 import BigNumber from "bignumber.js";
 import moment from 'moment';
 
-import TokenNomics from '../../img/quotation/bnb-busd.svg';
-import TokenIcon1 from '../../img/quotation/bnb-busd.svg';
+import TokenIcon1 from '../../img/quotation/token-logo.png';
 import TokenIcon2 from '../../img/quotation/lbd-bnb.svg';
 import TokenIcon3 from '../../img/quotation/eth-bg.png';
 import EtherIcon from '../../img/quotation/pan-bg2.svg';
@@ -158,7 +157,7 @@ const Home = (props) => {
                     <div className='d-flex px-4 justify-content-between flex-wrap'>
                         <div className='overview mt-3 w-3'>
                             <div className='d-flex py-3 px-4'>
-                                <img src={TokenIcon1} width={35} />
+                                <img src={TokenIcon1} className='token-logo' />
                                 <div className='px-2'>
                                     <h6 className='text-white mb-0'>TRY</h6>
                                     <p className='fs-12 text-gray'>Tradeify coin</p>
@@ -276,10 +275,10 @@ const Home = (props) => {
                                         <div>
                                             <div className='d-flex py-1'>
                                                 <div className='w-20 d-flex'>
-                                                    <img src={TokenIcon1} width={40} height={20} />
+                                                    <img src={TokenIcon1} className='token-logo' />
                                                     <div className='pl-4'>
-                                                        <h6 className='mb-0'>Binance</h6>
-                                                        <p className='text-gray text-left'>BNB</p>
+                                                        <h6 className='mb-0'>Tradeify</h6>
+                                                        <p className='text-gray text-left'>TRY</p>
                                                     </div>
                                                     <FaAngleDown className='text-white mt-1 ml-3 cursor-pointer'/>
                                                 </div>

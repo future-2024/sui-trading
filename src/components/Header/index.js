@@ -7,7 +7,7 @@ import $, { get } from 'jquery';
 import { ethers } from "ethers";
 import Web3 from 'web3';
 import './index.css';
-import Logo from '../../img/quotation/logo.png';
+import Logo from '../../img/quotation/brand-logo.png';
 import { useMediaQuery } from 'react-responsive';
 import { FaList } from 'react-icons/fa';
 import { BsTextareaResize } from "react-icons/bs";
@@ -46,7 +46,7 @@ const Header = () => {
             <div className='container'>
                 <div className='d-flex justify-content-between'>
                     <div className='d-flex'>
-                        <div className='m-auto logo cursor-pointer' onClick={() => goLink('home')}><img src={Logo} /></div>
+                        <div className='m-auto logo cursor-pointer' onClick={() => goLink('home')}><img src={Logo} className='brand-logo' /></div>
                         {!isTabletOrMobile && (
                             <div className='d-flex align-self-center'>
                                 <div className='px-4' onClick={() => goLink('home')}><p className={`cursor-pointer ${menuItem !== 'home' ? 'text-gray' : 'text-white'}`}>Dashbaord</p></div>

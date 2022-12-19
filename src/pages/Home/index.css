@@ -49,6 +49,11 @@ p {
 .fs-12 {
     font-size: 12px;
 }
+.token-logo {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
 .w-80 {
     width: 95%;
 }
