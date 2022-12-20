@@ -51,7 +51,7 @@ const Header = () => {
             <div className='container'>
                 <div className='d-flex justify-content-between'>
                     <div className='d-flex'>
-                        <div className='m-auto logo cursor-pointer' onClick={() => goLink('home')}><img src={Logo} className='brand-logo' /></div>
+                        <div className='m-auto logo cursor-pointer d-flex' onClick={() => goLink('home')}><img src={Logo} className='brand-logo' /><h5 className='text-white ml-2 mt-1'>Tradeify</h5></div>
                         {!isTabletOrMobile && (
                             <div className='d-flex align-self-center'>
                                 <div className='px-4' onClick={() => goLink('home')}><p className={`cursor-pointer ${menuItem !== 'home' ? 'text-gray' : 'text-white'}`}>Dashbaord</p></div>
