@@ -16,6 +16,9 @@
 .t-w-1 {
     width: 70%;
 }
+.rs-slider-progress-bar {
+    background: linear-gradient(93.57deg, #543DFB 0.71%, #F76CC5 50.59%, #FF4848 97.83%)!important;
+}
 .t-w-2 {
     width: 29%;
 }

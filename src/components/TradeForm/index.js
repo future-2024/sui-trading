@@ -29,7 +29,7 @@ const TradeForm = () => {
     const [isOrderMenu, setIsOrderMenu] = useState(false);
     const [isTokenMenu, setIsTokenMenu] = useState(false);
     const [orderType, setOrderType] = useState(1);
-    const [leverageValue, setLeverageValue] = useState(1);
+    const [leverageValue, setLeverageValue] = useState(6);
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
     const connectWallet = () => {
         global.setModalIsOpen(true);
@@ -154,7 +154,7 @@ const TradeForm = () => {
                                     <p>0%</p>
                                 </div>
                             </div>                            
-                            {/* <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div> */}
+                            <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                         </div>
                     </div>
                 )}
@@ -259,7 +259,7 @@ const TradeForm = () => {
                                     <p>0%</p>
                                 </div>
                             </div>                            
-                            {/* <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div> */}
+                            <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                         </div>
                     </div>
                 )}
@@ -315,8 +315,22 @@ const TradeForm = () => {
                         <div className='d-flex justify-content-between'>
                             <p className='text-left pt-2'>Fees</p>
                             <p className='text-gray pt-2'>--</p>
-                        </div>                           
-                        {/* <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div> */}
+                        </div>      
+                        <div className='pt-3'>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>ETH price</p>
+                                    <p>$1,219.14</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>USDC price</p>
+                                    <p>$1.00</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Avaiable Liquidity</p>
+                                    <p>$13,196,042.35</p>
+                                </div>
+                            </div>                         
+                        <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                     </div>
                 )}
             </div>
@@ -398,7 +412,7 @@ const TradeForm = () => {
                     <div className='mask-background'></div>
                     <div className='token-menu p-4'>
                         <div className='d-flex justify-content-between'>
-                            <div className='d-flex py-2'><h5 className='text-white'>Select Market</h5></div>
+                            <div className='d-flex py-2'><h5 className='text-white'>Select Collateral</h5></div>
                             <div className='text-white cursor-pointer' onClick={() => setIsTokenMenu(false)}><h3 className='text-white'>x</h3></div>
                         </div>
                         <hr className='text-white my-1' />
@@ -428,7 +442,8 @@ const TradeForm = () => {
                         </div>
                     </div>
                 </div>
-            )}            
+            )}         
+                     
         </div>
     )
 }

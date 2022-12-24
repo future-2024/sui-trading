@@ -50,7 +50,7 @@ const Home = (props) => {
     const [series2, setSeries2] = useState([75, 25, 11]);
     const [option2, setOption2] = useState({
         title: {
-            text:'GLP pool',
+            text:'TLP pool',
             align: 'center',
             style: {
                 color:'white'
@@ -100,7 +100,7 @@ const Home = (props) => {
                                 </div>
                                 <div className='d-flex'>
                                     <div>
-                                        <p>GLP Pool</p>
+                                        <p>TLP Pool</p>
                                         <h5 className='text-white'>$801,951,731</h5>
                                     </div>
                                     <div className='text-gray'> | </div>

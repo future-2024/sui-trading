@@ -32,6 +32,8 @@
 }
 .token-item:hover {
     background-color: rgba(0, 0, 0, 0.296);
+    border-color: rgb(238, 116, 230);
+    box-shadow: 0px 5px 20px 5px rgba(179, 93, 196, 0.668);
 }
 .leverage {
     color: white;
