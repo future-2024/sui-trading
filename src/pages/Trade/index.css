@@ -8,6 +8,7 @@
 }
 .trade-form {
     background-color: #342D55;
+    height: 100vh;
 }
 .trade-result > div {
     padding: 4px 24px;
@@ -35,6 +36,7 @@
 }
 .trade-form-input {
     background-color: #241F3E;
+    border-radius: 34px;
 }
 .trade-form-input > div {
     width: 33.33%;
@@ -47,12 +49,16 @@
 .trade-form-select > div {
     padding: 6px 14px;
 }
-.trade-token-select {
+.trade-form-select > .trade-token-select-1 {
+    padding: 6px 6px;
+}
+.trade-token-select, .trade-token-select-1 {
     background-color: #241F3E;
     padding: 14px;
     font-size: 22px;
+    border-radius: 5px;
 }
-.trade-token-select > p {
+.trade-token-select > p, .trade-token-select-1 > p {
     font-size: 15px;
 }
 .trade-token-select > div > p {
@@ -60,7 +66,7 @@
 }
 .token-select-input {
     background-color: #00000000;
-    width: 150px;
+    width: 130px;
     border: none;
     outline: none;
 }
@@ -69,6 +75,10 @@
 }
 .token-select:hover {
     color: #5f5a78;
+}
+.disabled {
+    pointer-events: none;
+    color: #929292;
 }
 .exchange-logo {
     position: absolute;

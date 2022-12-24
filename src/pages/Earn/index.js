@@ -146,7 +146,7 @@ const Earn = (props) => {
                     <div className='box pt-4 d-flex justify-content-between flex-wrap'>
                         <div className='box-item'>
                             <div>
-                                <h5 className='text-white pt-3 pl-4'>GLP (Arbitrum)</h5>
+                                <h5 className='text-white pt-3 pl-4'>TLP (Sui)</h5>
                                 <hr className='text-gray'/>
                             </div>
                             <div className='box-item-body-2 d-flex flex-column justify-content-between'>
@@ -191,8 +191,8 @@ const Earn = (props) => {
                                 <div>
                                     <hr className='text-gray mx-4'/>
                                     <div className='d-flex px-4 py-3 pt-0 flex-wrap'>
-                                        <div className='earn-button mr-4'>Buy GLP</div>
-                                        <div className='earn-button mr-4'>Sell GLP</div>
+                                        <div className='earn-button mr-4'>Buy TLP</div>
+                                        <div className='earn-button mr-4'>Sell TLP</div>
                                         <div className='earn-button'>Purchase Insurance</div>
                                     </div>
                                 </div>
@@ -295,7 +295,7 @@ const Earn = (props) => {
                             </div>
                             <div className='box-item'>
                                 <div>
-                                    <h5 className='text-white pt-3 pl-4'>GLP Vault</h5>
+                                    <h5 className='text-white pt-3 pl-4'>TLP Vault</h5>
                                     <hr className='text-gray'/>
                                 </div>
                                 <div className='box-item-body-3 d-flex flex-column justify-content-between'>

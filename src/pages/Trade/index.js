@@ -72,8 +72,8 @@ const Trade = (props) => {
                 </div>
                 <div className='t-w-2'>
                     <TradeForm />                    
-                    <div className='trade-form mt-2'>
-                        <div>
+                    {/* <div className='trade-form mt-2'> */}
+                        {/* <div>
                             <div>
                                 <h5 className='text-white text-left'>Useful Links</h5>
                                 <hr className='text-gray'/>
@@ -87,8 +87,8 @@ const Trade = (props) => {
                                     <p>Speed up page loading</p>
                                 </div>
                             </div>                            
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div> */}
                 </div>
             </div>
         </div>

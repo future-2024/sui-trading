@@ -25,10 +25,25 @@ const TradeForm = () => {
     const global = useContext(StoreContext);
     const [formIndex, setFormIndex] = useState(1);
     const [optionIndex, setOptionIndex] = useState(1);
+    const [limitPrice, setLimitPrice] = useState(1234.23);
+    const [isOrderMenu, setIsOrderMenu] = useState(false);
     const [isTokenMenu, setIsTokenMenu] = useState(false);
+    const [orderType, setOrderType] = useState(1);
+    const [leverageValue, setLeverageValue] = useState(1);
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
     const connectWallet = () => {
         global.setModalIsOpen(true);
+    }
+    const openMenu = () => {
+        if(isOrderMenu == true) {
+            setIsOrderMenu(false);
+        } else {
+            setIsOrderMenu(true);
+        }
+    }
+    const selectOrderType = (index) => {
+        setOrderType(index)
+        setIsOrderMenu(false);
     }
     return (
         <div>
@@ -41,16 +56,35 @@ const TradeForm = () => {
                 {formIndex == 1 && (
                     <div>
                         <div>
-                            <div className='trade-form-select d-flex'>
-                                <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
-                                <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div>
-                                {/* <div><p className='text-white'>Trigger</p></div> */}
-                            </div>
+                            <div className='trade-form-select d-flex mt-2 p-relative'>
+                                {/* <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
+                                <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div> */}
+                                <div className='trade-token-select-1 mb-2 w-50'>
+                                    <p className='text-gray text-left'>{orderType == 2 ? 'Limit Price':'Market Price'}</p>
+                                    <div className='d-flex'>
+                                        <span className={`${orderType == 2 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 2 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className='trade-token-select-1 mb-2 ml-2 w-50'>
+                                    <p className='text-gray text-left'>Order Type</p>
+                                    <div className='d-flex justify-content-end'>
+                                        <div className='d-flex cursor-pointer token-select mr-2' onClick={openMenu}><h5>{orderType == 2 ? 'Limit':'Market'}</h5><FaAngleDown className='fs-26 mt-1' /></div>
+                                    </div>
+                                </div>      
+                                {isOrderMenu && (                        
+                                    <div className='market-menu'>
+                                        <div onClick={() => selectOrderType(1)}>Market</div>
+                                        <div onClick={() => selectOrderType(2)}>Limit</div>
+                                        <div onClick={() => selectOrderType(3)}>Stop Market</div>
+                                    </div> 
+                                )}    
+                            </div> 
+
                             <div className='trade-token-select mb-2'>
                                 <p className='text-gray text-left'>Pay</p>
                                 <div className='d-flex justify-content-between'>
                                     <input type='text' className='token-select-input' placeholder='0.0' />
-                                    <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h4>ETH</h4><FaAngleDown className='fs-26 mt-2' /></div>
+                                    <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h5>ETH</h5><FaAngleDown className='fs-26 mt-1' /></div>
                                 </div>
                             </div>
                             <div className='ex-logo-part'><img src={ExchangeLogo} width={45} className='exchange-logo' /></div>
@@ -58,7 +92,7 @@ const TradeForm = () => {
                                 <div className='d-flex justify-content-between'><p className='text-gray text-left'>Long</p><p className='text-gray text-left'>Leverage:2.00x</p></div>
                                 <div className='d-flex justify-content-between'>
                                     <input type='text' className='token-select-input' placeholder='0.0' />
-                                    <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h4>ETH</h4><FaAngleDown className='fs-26 mt-2' /></div>
+                                    <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h5>ETH</h5><FaAngleDown className='fs-26 mt-1' /></div>
                                 </div>
                             </div>
                             {optionIndex == 2 && (
@@ -71,15 +105,18 @@ const TradeForm = () => {
                                 </div>
                             )}
                             <div>
-                                <p className='text-left pt-2'>Leverage slider</p>
+                                <div className='text-left pt-2 d-flex justify-content-between'><p className='mt-3'>Leverage:{leverageValue}</p> <input type='text' className='form-control w-25 leverage' value={leverageValue} onChange={(e) => setLeverageValue(e.target.value)}/></div>
                                 <div className='pt-3'>
+                                    {/* <input type='text' onChange={(value) => setLeverageValue(value)} /> */}
                                     <Slider
-                                        defaultValue={5}
+                                        defaultValue={leverageValue}
                                         min={2}
                                         step={3}
                                         max={50}
                                         graduated
                                         progress
+                                        value={leverageValue}
+                                        onChange={(value) => { setLeverageValue(value) }}
                                         renderMark={mark => {
                                             return mark;
                                         }}
@@ -89,109 +126,168 @@ const TradeForm = () => {
                             </div>
                             <div className='pt-3'>
                                 <div className='d-flex justify-content-between'>
-                                    <p className='text-gray'>Collateral In</p>
-                                    <p>USD</p>
+                                    <p className='text-gray'>Available Liquidity</p>
+                                    <p>24,23.23 ETH</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>
-                                    <p className='text-gray'>Leverage</p>
-                                    <p>-</p>
+                                    <p className='text-gray'>Liquidity Source</p>
+                                    <p>MUX</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>
-                                    <p className='text-gray'>Entry Price</p>
-                                    <p>$1,951,732</p>
+                                    <p className='text-gray'>Profits in</p>
+                                    <p>ETH</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>
                                     <p className='text-gray'>Liq.Price</p>
                                     <p>-</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Collateral</p>
+                                    <p>-</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
                                     <p className='text-gray'>Fees</p>
                                     <p>-</p>
                                 </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Spread</p>
+                                    <p>0%</p>
+                                </div>
                             </div>                            
-                            <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
+                            {/* <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div> */}
                         </div>
                     </div>
                 )}
                 {formIndex == 2 && (
                     <div>
-                        <div className='trade-form-select d-flex'>
-                            <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
-                            <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div>
-                            {/* <div><p className='text-white'>Trigger</p></div> */}
-                        </div>
-                        <div className='trade-token-select mb-2'>
-                            <p className='text-gray text-left'>Pay</p>
-                            <div className='d-flex justify-content-between'>
-                                <input type='text' className='token-select-input' placeholder='0.0' />
-                                <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h4>ETH</h4><FaAngleDown className='fs-26 mt-2' /></div>
-                            </div>
-                        </div>
-                        <div className='ex-logo-part'><img src={ExchangeLogo} width={45} className='exchange-logo' /></div>
-                        <div className='trade-token-select mt-2'>
-                            <div className='d-flex justify-content-between'><p className='text-gray text-left'>Short</p><p className='text-gray text-left'>Leverage:2.00x</p></div>
-                            <div className='d-flex justify-content-between'>
-                                <input type='text' className='token-select-input' placeholder='0.0' />
-                                <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h4>ETH</h4><FaAngleDown className='fs-26 mt-2' /></div>
-                            </div>
-                        </div>
-                        {optionIndex == 2 && (
-                            <div className='trade-token-select mt-2'>
-                                <div className='d-flex justify-content-between'><p className='text-gray text-left'>Price</p><p className='text-gray text-left'>Mark: 1233.23</p></div>
+                        <div>
+                            <div className='trade-form-select d-flex mt-2 p-relative'>
+                                {/* <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
+                                <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div> */}
+                                <div className='trade-token-select-1 mb-2 w-50'>
+                                    <p className='text-gray text-left'>{orderType == 2 ? 'Limit Price':'Market Price'}</p>
+                                    <div className='d-flex'>
+                                        <span className={`${orderType == 2 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 2 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
+                                    </div>
+                                </div>
+                                <div className='trade-token-select-1 mb-2 ml-2 w-50'>
+                                    <p className='text-gray text-left'>Order Type</p>
+                                    <div className='d-flex justify-content-end'>
+                                        <div className='d-flex cursor-pointer token-select mr-2' onClick={openMenu}><h5>{orderType == 2 ? 'Limit':'Market'}</h5><FaAngleDown className='fs-26 mt-1' /></div>
+                                    </div>
+                                </div>      
+                                {isOrderMenu && (                        
+                                    <div className='market-menu'>
+                                        <div onClick={() => selectOrderType(1)}>Market</div>
+                                        <div onClick={() => selectOrderType(2)}>Limit</div>
+                                        <div onClick={() => selectOrderType(3)}>Stop Market</div>
+                                    </div> 
+                                )}    
+                            </div> 
+
+                            <div className='trade-token-select mb-2'>
+                                <p className='text-gray text-left'>Pay</p>
                                 <div className='d-flex justify-content-between'>
                                     <input type='text' className='token-select-input' placeholder='0.0' />
-                                    <div className='d-flex cursor-pointer token-select'><h4>USD</h4></div>
+                                    <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h5>ETH</h5><FaAngleDown className='fs-26 mt-1' /></div>
                                 </div>
                             </div>
-                        )}
-                        <div>
-                            <p className='text-left pt-2'>Leverage slider</p>
+                            <div className='ex-logo-part'><img src={ExchangeLogo} width={45} className='exchange-logo' /></div>
+                            <div className='trade-token-select mt-2'>
+                                <div className='d-flex justify-content-between'><p className='text-gray text-left'>Short</p><p className='text-gray text-left'>Leverage:2.00x</p></div>
+                                <div className='d-flex justify-content-between'>
+                                    <input type='text' className='token-select-input' placeholder='0.0' />
+                                    <div className='d-flex cursor-pointer token-select' onClick={() => setIsTokenMenu(true)}><h5>ETH</h5><FaAngleDown className='fs-26 mt-1' /></div>
+                                </div>
+                            </div>
+                            {optionIndex == 2 && (
+                                <div className='trade-token-select mt-2'>
+                                    <div className='d-flex justify-content-between'><p className='text-gray text-left'>Price</p><p className='text-gray text-left'>Mark: 1233.23</p></div>
+                                    <div className='d-flex justify-content-between'>
+                                        <input type='text' className='token-select-input' placeholder='0.0' />
+                                        <div className='d-flex cursor-pointer token-select'><h4>USD</h4></div>
+                                    </div>
+                                </div>
+                            )}
+                            <div>
+                                <div className='text-left pt-2 d-flex justify-content-between'><p className='mt-3'>Leverage:{leverageValue}</p> <input type='text' className='form-control w-25 leverage' value={leverageValue} onChange={(e) => setLeverageValue(e.target.value)}/></div>
+                                <div className='pt-3'>
+                                    {/* <input type='text' onChange={(value) => setLeverageValue(value)} /> */}
+                                    <Slider
+                                        defaultValue={leverageValue}
+                                        min={2}
+                                        step={3}
+                                        max={50}
+                                        graduated
+                                        progress
+                                        value={leverageValue}
+                                        onChange={(value) => { setLeverageValue(value) }}
+                                        renderMark={mark => {
+                                            return mark;
+                                        }}
+                                        className='custom-slider'
+                                    />
+                                </div>
+                            </div>
                             <div className='pt-3'>
-                                <Slider
-                                    defaultValue={5}
-                                    min={2}
-                                    step={3}
-                                    max={50}
-                                    graduated
-                                    progress
-                                    renderMark={mark => {
-                                        return mark;
-                                    }}
-                                    className='custom-slider'
-                                />
-                            </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Available Liquidity</p>
+                                    <p>24,23.23 ETH</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Liquidity Source</p>
+                                    <p>MUX</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Profits in</p>
+                                    <p>ETH</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Liq.Price</p>
+                                    <p>-</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Collateral</p>
+                                    <p>-</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Fees</p>
+                                    <p>-</p>
+                                </div>
+                                <div className='d-flex justify-content-between'>
+                                    <p className='text-gray'>Spread</p>
+                                    <p>0%</p>
+                                </div>
+                            </div>                            
+                            {/* <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div> */}
                         </div>
-                        <div className='pt-3'>
-                            <div className='d-flex justify-content-between'>
-                                <p className='text-gray'>Collateral In</p>
-                                <p>USD</p>
-                            </div>
-                            <div className='d-flex justify-content-between'>
-                                <p className='text-gray'>Leverage</p>
-                                <p>-</p>
-                            </div>
-                            <div className='d-flex justify-content-between'>
-                                <p className='text-gray'>Entry Price</p>
-                                <p>$1,951,732</p>
-                            </div>
-                            <div className='d-flex justify-content-between'>
-                                <p className='text-gray'>Liq.Price</p>
-                                <p>-</p>
-                            </div>
-                            <div className='d-flex justify-content-between'>
-                                <p className='text-gray'>Fees</p>
-                                <p>-</p>
-                            </div>
-                        </div>                            
-                        <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                     </div>
                 )}
                 {formIndex == 3 && (
                     <div>
-                        <div className='trade-form-select d-flex'>
-                            <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
-                            <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div>
-                        </div>
+                        <div className='trade-form-select d-flex mt-2 p-relative'>
+                            {/* <div><p className={`cursor-pointer ${optionIndex == 1 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(1)}>Market</p></div>
+                            <div><p className={`cursor-pointer ${optionIndex == 2 ? 'text-white' : 'text-gray'}`} onClick={() => setOptionIndex(2)}>Limit</p></div> */}
+                            <div className='trade-token-select-1 mb-2 w-50'>
+                                <p className='text-gray text-left'>{orderType == 2 ? 'Limit Price':'Market Price'}</p>
+                                <div className='d-flex'>
+                                    <span className={`${orderType == 2 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 2 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
+                                </div>
+                            </div>
+                            <div className='trade-token-select-1 mb-2 ml-2 w-50'>
+                                <p className='text-gray text-left'>Order Type</p>
+                                <div className='d-flex justify-content-end'>
+                                    <div className='d-flex cursor-pointer token-select mr-2' onClick={openMenu}><h5>{orderType == 2 ? 'Limit':'Market'}</h5><FaAngleDown className='fs-26 mt-1' /></div>
+                                </div>
+                            </div>      
+                            {isOrderMenu && (                        
+                                <div className='market-menu'>
+                                    <div onClick={() => selectOrderType(1)}>Market</div>
+                                    <div onClick={() => selectOrderType(2)}>Limit</div>
+                                    <div onClick={() => selectOrderType(3)}>Stop Market</div>
+                                </div> 
+                            )}    
+                        </div> 
                         <div className='trade-token-select mb-2'>
                             <p className='text-gray text-left'>Pay</p>
                             <div className='d-flex justify-content-between'>
@@ -220,12 +316,12 @@ const TradeForm = () => {
                             <p className='text-left pt-2'>Fees</p>
                             <p className='text-gray pt-2'>--</p>
                         </div>                           
-                        <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
+                        {/* <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div> */}
                     </div>
                 )}
             </div>
             
-            {formIndex == 1 && (<div className='trade-form mt-2'>
+            {/* {formIndex == 1 && (<div className='trade-form mt-2'>
                 <div>
                     <div>
                         <h5 className='text-white text-left'>Long ETH</h5>
@@ -295,36 +391,39 @@ const TradeForm = () => {
                     </div>                            
                 </div>
             </div>
-            )}
+            )} */}
 
             {isTokenMenu && (
-                <div className='token-menu p-4'>
-                    <div className='d-flex justify-content-between'>
-                        <div className='d-flex py-2'><h4 className='text-white'>Pay</h4></div>
-                        <div className='text-white cursor-pointer' onClick={() => setIsTokenMenu(false)}><h3 className='text-white'>x</h3></div>
-                    </div>
-                    <hr className='text-white my-1' />
-                    <input className='referral text-gray mt-2 w-100 border-radius-0' type='text' placeholder='Search Token'/>
-                    <div className='pt-4'>
-                        <div className='d-flex token-item'>
-                            <img src={TokenIcon1} width={45} />
-                            <div className='ml-4'>
-                                <h5 className='text-white text-left'>BNB</h5>
-                                <p className='text-gray'>Bianace smart chain</p>
-                            </div>
+                <div>
+                    <div className='mask-background'></div>
+                    <div className='token-menu p-4'>
+                        <div className='d-flex justify-content-between'>
+                            <div className='d-flex py-2'><h5 className='text-white'>Select Market</h5></div>
+                            <div className='text-white cursor-pointer' onClick={() => setIsTokenMenu(false)}><h3 className='text-white'>x</h3></div>
                         </div>
-                        <div className='d-flex token-item'>
-                            <img src={TokenIcon2} width={45} />
-                            <div className='ml-4'>
-                                <h5 className='text-white text-left'>Doge</h5>
-                                <p className='text-gray'>Dogechain</p>
+                        <hr className='text-white my-1' />
+                        <input className='referral text-gray mt-2 w-100 border-radius-0' type='text' placeholder='Search Token'/>
+                        <div className='pt-4'>
+                            <div className='d-flex token-item'>
+                                <img src={TokenIcon1} width={45} />
+                                <div className='ml-4'>
+                                    <h5 className='text-white text-left'>BNB</h5>
+                                    <p className='text-gray'>Bianace smart chain</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className='d-flex token-item'>
-                            <img src={TokenIcon3} width={45} />
-                            <div className='ml-4'>
-                                <h5 className='text-white text-left'>ETH</h5>
-                                <p className='text-gray'>Ethereum</p>
+                            <div className='d-flex token-item'>
+                                <img src={TokenIcon2} width={45} />
+                                <div className='ml-4'>
+                                    <h5 className='text-white text-left'>Doge</h5>
+                                    <p className='text-gray'>Dogechain</p>
+                                </div>
+                            </div>
+                            <div className='d-flex token-item'>
+                                <img src={TokenIcon3} width={45} />
+                                <div className='ml-4'>
+                                    <h5 className='text-white text-left'>ETH</h5>
+                                    <p className='text-gray'>Ethereum</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -80,7 +80,7 @@ const Home = (props) => {
                 <div className='stats pt-5'>
                     <div className='px-4'>
                         <h4 className='text-white font-bold'>Stats</h4>
-                        <p>Arbitrum Total Stats start from 01 Sep 2021 <br/>For detailed stats: https://stats.TRY.io.</p>
+                        {/* <p>Arbitrum Total Stats start from 01 Sep 2021 <br/>For detailed stats: https://stats.TRY.io.</p> */}
                     </div>
                     <div className='d-flex px-4 justify-content-between flex-wrap'>
                         <div className='overview mt-3 w-1'>
@@ -152,7 +152,7 @@ const Home = (props) => {
                 <div className='stats'>
                     <div className='px-4'>
                         <h4 className='text-white font-bold'>Tokens</h4>
-                        <p>Platform and GLP index tokens.</p>
+                        <p>Platform and TLP index tokens.</p>
                     </div>
                     <div className='d-flex px-4 justify-content-between flex-wrap'>
                         <div className='overview mt-3 w-3'>
@@ -196,10 +196,10 @@ const Home = (props) => {
 
                         <div className='overview mt-3 w-3'>
                             <div className='d-flex py-3 px-4'>
-                                <img src={TokenIcon2} width={35} />
+                                <img src={TokenIcon1} width={35} className='token-logo' />
                                 <div className='px-2'>
-                                    <h6 className='text-white mb-0'>GLP</h6>
-                                    <p className='fs-12 text-gray'>GLP</p>
+                                    <h6 className='text-white mb-0'>TLP</h6>
+                                    <p className='fs-12 text-gray'>TLP</p>
                                 </div>
                                 <div className='pt-1'>
                                     <FaAngleDown className='text-white' />
@@ -236,7 +236,7 @@ const Home = (props) => {
                     <div className='px-4'>
                         <div className='overview mt-3 w-5 pb-4'>
                             <div className='d-flex py-3 px-4'>
-                                <h5 className='text-white'>GLP Index Composition</h5>
+                                <h5 className='text-white'>TLP Liquidity pool</h5>
                             </div>
                             <hr className='text-white mx-4 m-0'/>
                             <div className='overview-body pb-2 token-table'>
