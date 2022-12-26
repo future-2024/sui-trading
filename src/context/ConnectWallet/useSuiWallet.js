@@ -1,19 +1,5 @@
 import React, { useCallback, useEffect, useState, useContext } from 'react';
 
-// export const WalletType = 'suiWallet' | 'suietWallet' | 'martianSuiWallet' | 'ethosWallet';
-
-// type SuiWalletProvider = {
-//   children: React.ReactNode
-// }
-
-// type SuiWalletContextValues = {
-//   account: string | undefined,
-//   connected: boolean,
-//   connecting: boolean,
-//   connect: (type: WalletType) => void,
-//   disconnect: () => void
-// }
-
 const StoreContext = React.createContext({
   account: undefined,
   connected: false,

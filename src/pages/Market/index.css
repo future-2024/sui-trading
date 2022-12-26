@@ -1,0 +1,41 @@
+.market-form {
+    border-radius: 34px;
+    padding: 3px;
+    background-color: #342D55;
+    color: white;
+}
+.market-form-input {
+    background-color: #241F3E;
+    border-radius: 34px;
+    border:2px solid rgb(94, 94, 94);
+}
+.market-form-input > div {
+    width: 33.33%;
+    margin: 4px 4px;
+    padding: 7px 14px;
+    border-radius: 34px;
+    cursor: pointer;
+}
+.market-form-input > .active {
+    background: linear-gradient(93.57deg, #543DFB 0.71%, #F76CC5 50.59%, #FF4848 97.83%);    
+}
+.window {
+    background-color: #342D55;
+    border-radius: 7px;
+}
+.text-grey {
+    color: rgb(94, 94, 94);
+}
+.text-pink-sharp {
+    color: rgb(204, 204, 204);
+}
+.border-radius {
+    border-radius: 34px;
+}
+.percent-item {
+    background-color: #342D55;
+    padding: 6px 12px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: 500;
+}

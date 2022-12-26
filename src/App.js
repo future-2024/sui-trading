@@ -12,6 +12,10 @@ import Home from './pages/Home';
 import Referral from './pages/Referral';
 import Earn from './pages/Earn';
 import Trade from './pages/Trade';
+import Market from './pages/Market';
+import Staking from './pages/Staking';
+import LockStake from './pages/LockStake';
+
 import Header from './components/Header';
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -73,6 +77,9 @@ function App() {
           <Route path="/referral" exact component={Referral} />
           <Route path="/earn" exact component={Earn} />
           <Route path="/trade" exact component={Trade} />
+          <Route path="/market" exact component={Market} />
+          <Route path="/staking" exact component={Staking} />
+          <Route path="/lockStake" exact component={LockStake} />
         </Switch>
 
         <Modal

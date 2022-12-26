@@ -1,5 +1,9 @@
 body {
     background-color: #241F3E!important;
+    font-family: "Space Grotesk"!important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk"!important;
 }
 .wallet-item {
     border: 2px solid rgba(230, 230, 230, 0.484);

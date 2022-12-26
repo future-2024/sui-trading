@@ -17,8 +17,8 @@ import { StoreContext } from '../../store';
 
 import ExchangeLogo from '../../img/quotation/exchange.png';
 import Logo from '../../img/quotation/TWT.png';
-import TokenIcon1 from '../../img/quotation/bnb-busd.svg';
-import TokenIcon2 from '../../img/quotation/lbd-bnb.svg';
+import TokenIcon1 from '../../img/quotation/SUI.png';
+import TokenIcon2 from '../../img/quotation/BTC.svg';
 import TokenIcon3 from '../../img/quotation/eth-bg.png';
 
 const TradeForm = () => {
@@ -62,7 +62,7 @@ const TradeForm = () => {
                                 <div className='trade-token-select-1 mb-2 w-50'>
                                     <p className='text-gray text-left'>{orderType == 2 ? 'Limit Price':'Market Price'}</p>
                                     <div className='d-flex'>
-                                        <span className={`${orderType == 2 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 2 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
+                                        <span className={`${orderType == 1 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 1 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className='trade-token-select-1 mb-2 ml-2 w-50'>
@@ -124,6 +124,7 @@ const TradeForm = () => {
                                     />
                                 </div>
                             </div>
+                            <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                             <div className='pt-3'>
                                 <div className='d-flex justify-content-between'>
                                     <p className='text-gray'>Available Liquidity</p>
@@ -131,7 +132,7 @@ const TradeForm = () => {
                                 </div>
                                 <div className='d-flex justify-content-between'>
                                     <p className='text-gray'>Liquidity Source</p>
-                                    <p>MUX</p>
+                                    <p>Tradeify</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>
                                     <p className='text-gray'>Profits in</p>
@@ -154,7 +155,6 @@ const TradeForm = () => {
                                     <p>0%</p>
                                 </div>
                             </div>                            
-                            <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                         </div>
                     </div>
                 )}
@@ -167,7 +167,7 @@ const TradeForm = () => {
                                 <div className='trade-token-select-1 mb-2 w-50'>
                                     <p className='text-gray text-left'>{orderType == 2 ? 'Limit Price':'Market Price'}</p>
                                     <div className='d-flex'>
-                                        <span className={`${orderType == 2 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 2 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
+                                        <span className={`${orderType == 1 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 1 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
                                     </div>
                                 </div>
                                 <div className='trade-token-select-1 mb-2 ml-2 w-50'>
@@ -229,6 +229,7 @@ const TradeForm = () => {
                                     />
                                 </div>
                             </div>
+                            <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                             <div className='pt-3'>
                                 <div className='d-flex justify-content-between'>
                                     <p className='text-gray'>Available Liquidity</p>
@@ -236,7 +237,7 @@ const TradeForm = () => {
                                 </div>
                                 <div className='d-flex justify-content-between'>
                                     <p className='text-gray'>Liquidity Source</p>
-                                    <p>MUX</p>
+                                    <p>Tradeify</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>
                                     <p className='text-gray'>Profits in</p>
@@ -259,7 +260,6 @@ const TradeForm = () => {
                                     <p>0%</p>
                                 </div>
                             </div>                            
-                            <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                         </div>
                     </div>
                 )}
@@ -271,7 +271,7 @@ const TradeForm = () => {
                             <div className='trade-token-select-1 mb-2 w-50'>
                                 <p className='text-gray text-left'>{orderType == 2 ? 'Limit Price':'Market Price'}</p>
                                 <div className='d-flex'>
-                                    <span className={`${orderType == 2 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 2 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
+                                    <span className={`${orderType == 1 && ('disabled')}`}>$</span><input type='text' className={`token-select-input ${orderType == 1 && ('disabled')}`} placeholder='0.0' value={limitPrice} onChange={(e) => setLimitPrice(e.target.value)} />
                                 </div>
                             </div>
                             <div className='trade-token-select-1 mb-2 ml-2 w-50'>
@@ -312,104 +312,32 @@ const TradeForm = () => {
                                 </div>
                             </div>
                         )}
+                        
+                        <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
                         <div className='d-flex justify-content-between'>
                             <p className='text-left pt-2'>Fees</p>
                             <p className='text-gray pt-2'>--</p>
                         </div>      
                         <div className='pt-3'>
-                                <div className='d-flex justify-content-between'>
-                                    <p className='text-gray'>ETH price</p>
-                                    <p>$1,219.14</p>
-                                </div>
-                                <div className='d-flex justify-content-between'>
-                                    <p className='text-gray'>USDC price</p>
-                                    <p>$1.00</p>
-                                </div>
-                                <div className='d-flex justify-content-between'>
-                                    <p className='text-gray'>Avaiable Liquidity</p>
-                                    <p>$13,196,042.35</p>
-                                </div>
-                            </div>                         
-                        <div className='earn-button w-100 text-center' onClick={connectWallet}>Connect Wallet</div>
+                            <div className='d-flex justify-content-between'>
+                                <p className='text-gray'>ETH price</p>
+                                <p>$1,219.14</p>
+                            </div>
+                            <div className='d-flex justify-content-between'>
+                                <p className='text-gray'>USDC price</p>
+                                <p>$1.00</p>
+                            </div>
+                            <div className='d-flex justify-content-between'>
+                                <p className='text-gray'>Avaiable Liquidity</p>
+                                <p>$13,196,042.35</p>
+                            </div>
+                        </div>                         
                     </div>
                 )}
             </div>
             
-            {/* {formIndex == 1 && (<div className='trade-form mt-2'>
-                <div>
-                    <div>
-                        <h5 className='text-white text-left'>Long ETH</h5>
-                        <hr className='text-gray'/>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Entry Price</p>
-                            <p>$8,951,732</p>
-                        </div>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Exit Price</p>
-                            <p>$8,951,732</p>
-                        </div>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Borrow Fee</p>
-                            <p>0.0050% / 1h</p>
-                        </div>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Available Liquidity</p>
-                            <p>$4,984,472</p>
-                        </div>
-                    </div>                            
-                </div>
-            </div>
-            )}
-            {formIndex == 2 && (<div className='trade-form mt-2'>
-                <div>
-                    <div>
-                        <h5 className='text-white text-left'>Short ETH</h5>
-                        <hr className='text-gray'/>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Entry Price</p>
-                            <p>$8,951,732</p>
-                        </div>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Exit Price</p>
-                            <p>$8,951,732</p>
-                        </div>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Borrow Fee</p>
-                            <p>0.0050% / 1h</p>
-                        </div>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Available Liquidity</p>
-                            <p>$4,984,472</p>
-                        </div>
-                    </div>                            
-                </div>
-            </div>
-            )}
-            {formIndex == 3 && (<div className='trade-form mt-2'>
-                <div>
-                    <div>
-                        <h5 className='text-white text-left'>Swap</h5>
-                        <hr className='text-gray'/>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>ETH Price</p>
-                            <p>$1211.22</p>
-                        </div>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>BTC Price</p>
-                            <p>$17,243.23</p>
-                        </div>
-                        <div className='d-flex justify-content-between'>
-                            <p className='text-gray'>Available Liquidity</p>
-                            <p>$1,537,243.23</p>
-                        </div>
-                    </div>                            
-                </div>
-            </div>
-            )} */}
-
             {isTokenMenu && (
                 <div>
-                    <div className='mask-background'></div>
                     <div className='token-menu p-4'>
                         <div className='d-flex justify-content-between'>
                             <div className='d-flex py-2'><h5 className='text-white'>Select Collateral</h5></div>
@@ -418,28 +346,61 @@ const TradeForm = () => {
                         <hr className='text-white my-1' />
                         <input className='referral text-gray mt-2 w-100 border-radius-0' type='text' placeholder='Search Token'/>
                         <div className='pt-4'>
-                            <div className='d-flex token-item'>
-                                <img src={TokenIcon1} width={45} />
+                            <div className='d-flex token-item justify-content-between'>
+                                <div className='d-flex'>
+                                    <img src={TokenIcon1} width={45} />
+                                    <div className='ml-4'>
+                                        <h5 className='text-white text-left'>SUI</h5>
+                                        <p className='text-gray'>Sui</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 className='text-white text-right'>$1.0034</h5>
+                                    <p className='text-green text-right'>+0.02</p>
+                                </div>
+                            </div>
+                            <div className='d-flex token-item justify-content-between'>
+                                <div className='d-flex'>
+                                    <img src={TokenIcon3} width={45} />
+                                    <div className='ml-4'>
+                                        <h5 className='text-white text-left'>ETH</h5>
+                                        <p className='text-gray'>Ethereum</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 className='text-white text-right'>$1234.32</h5>
+                                    <p className='text-red text-right'>-0.87</p>
+                                </div>
+                            </div>
+                            <div className='d-flex token-item justify-content-between'>
+                                <div className='d-flex'>
+                                    <img src={TokenIcon2} width={45} />
+                                    <div className='ml-4'>
+                                        <h5 className='text-white text-left'>BTC</h5>
+                                        <p className='text-gray'>Bitcoin</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 className='text-white text-right'>$14034.43</h5>
+                                    <p className='text-red text-right'>-0.34</p>
+                                </div>
+                            </div>
+                        </div>
+                            {/* <div className='d-flex token-item'>
+                                <img src={TokenIcon3} width={45} />
                                 <div className='ml-4'>
-                                    <h5 className='text-white text-left'>BNB</h5>
-                                    <p className='text-gray'>Bianace smart chain</p>
+                                    <h5 className='text-white text-left'>ETH</h5>
+                                    <p className='text-gray'>Etherem</p>
                                 </div>
                             </div>
                             <div className='d-flex token-item'>
                                 <img src={TokenIcon2} width={45} />
                                 <div className='ml-4'>
-                                    <h5 className='text-white text-left'>Doge</h5>
-                                    <p className='text-gray'>Dogechain</p>
+                                    <h5 className='text-white text-left'>BTC</h5>
+                                    <p className='text-gray'>Bitcoin</p>
                                 </div>
                             </div>
-                            <div className='d-flex token-item'>
-                                <img src={TokenIcon3} width={45} />
-                                <div className='ml-4'>
-                                    <h5 className='text-white text-left'>ETH</h5>
-                                    <p className='text-gray'>Ethereum</p>
-                                </div>
-                            </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             )}         

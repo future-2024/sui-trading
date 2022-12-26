@@ -2,9 +2,7 @@
     background-color: #342D55;
     padding: 0px;
 }
-.nav > div > div {
-    padding: 0 12px;
-}
+
 .button {
     background-color: rgba(22, 22, 22, 0.171);
     padding: 2px 6px;
@@ -40,11 +38,11 @@
 }
 p {
     /* font-family: 'Space Grotesk'; */
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .logo > img {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
 }
 .nav-menu {
     background: rgba(23,24,44,.5333333333) 0 0 no-repeat padding-box;

@@ -23,6 +23,28 @@
     align-items: center;
     border: none;
 }
+.earn-button-grey {
+    margin-top: 10px;
+    background-color: #858585;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 15px;
+    line-height: 2rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    padding: 5px 12px;
+    text-decoration: none;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 36px;
+    align-items: center;
+    border: none;
+}
+.earn-button-grey:hover {    
+    background-color: #c8c8c8;
+    transition: 0.5s;
+}
 .earn-button:hover {
     background-image: linear-gradient(to right, #6552debd, rgba(246, 108, 198, 0.786), #ff6f6fb8);
     transition: 0.5s;
