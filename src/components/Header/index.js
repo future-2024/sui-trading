@@ -59,8 +59,7 @@ const Header = () => {
                                 <div className='px-4' onClick={() => goLink('earn')}><p className={`cursor-pointer ${menuItem !== 'earn' ? 'text-gray' : 'text-white'}`}>Earn</p></div>
                                 <div className='px-4' onClick={() => goLink('referral')}><p className={`cursor-pointer ${menuItem !== 'referral' ? 'text-gray' : 'text-white'}`}>Referral</p></div>
                                 <div className='px-4' onClick={() => goLink('market')}><p className={`cursor-pointer ${menuItem !== 'market' ? 'text-gray' : 'text-white'}`}>Liquidity</p></div>
-                                <div className='px-4' onClick={() => goLink('staking')}><p className={`cursor-pointer ${menuItem !== 'staking' ? 'text-gray' : 'text-white'}`}>Staking</p></div>
-                                <div className='px-4' onClick={() => goLink('lockStake')}><p className={`cursor-pointer ${menuItem !== 'lockStake' ? 'text-gray' : 'text-white'}`}>Lock Stake</p></div>
+                                <div className='px-4' onClick={() => goLink('liquidity')}><p className={`cursor-pointer ${menuItem !== 'liquidity' ? 'text-gray' : 'text-white'}`}>Liquidity</p></div>
                             </div>
                         )}
                         {isTabletOrMobile && (
@@ -80,8 +79,7 @@ const Header = () => {
                                         <div className={`${menuItem !== 'earn' ? '' : 'menu-active'}`} onClick={() => goLink('earn')}><h4 className='text-white'>Earn</h4></div>
                                         <div className={`${menuItem !== 'referral' ? '' : 'menu-active'}`} onClick={() => goLink('referral')}><h4 className='text-white'>Referral</h4></div>
                                         <div className={`${menuItem !== 'market' ? '' : 'menu-active'}`} onClick={() => goLink('market')}><h4 className='text-white'>Liquidity</h4></div>
-                                        <div className={`${menuItem !== 'staking' ? '' : 'menu-active'}`} onClick={() => goLink('staking')}><h4 className='text-white'>Staking</h4></div>
-                                        <div className={`${menuItem !== 'lockStake' ? '' : 'menu-active'}`} onClick={() => goLink('lockStake')}><h4 className='text-white'>Lock Stake</h4></div>
+                                        <div className={`${menuItem !== 'liquidity' ? '' : 'menu-active'}`} onClick={() => goLink('liquidity')}><h4 className='text-white'>Liquidity</h4></div>
                                     </div>
                                 )}                                
                             </div>

@@ -1,0 +1,42 @@
+.view-pool {
+    background-color: #463D72;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    height: 35px;
+    width: 150px;
+    cursor: pointer;
+}
+.view-pool:hover {
+    background-color: #5a5476;
+    transition: 0.5s;
+}
+.img-circle {
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+.img-circle-2 {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+.composition {
+    background-color: #342D55;
+    padding: 30px;
+    border-radius: 25px;
+    position: relative;
+}
+.img-badge {
+    background-color: #443C69;
+    display: flex;
+    padding: 6px 12px;
+    width: 200px;
+    border-radius: 0px 25px 0px 25px;
+    top: 0;
+    right: 0;   
+    font-size: 12px;
+    padding: 6px 6px;
+    position: absolute;
+}
