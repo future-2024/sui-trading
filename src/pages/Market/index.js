@@ -23,7 +23,7 @@ const Market = (props) => {
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
     const [switchMarket, setSwitchMarket] = useState(1);
     return (
-        <div className='px-5 d-flex'>
+        <div className={`d-flex ${isMobile == true ? `px-3`:`px-5`}`}>
             <div className='w-15'>
             </div>
             <div className='w-65 pb-3'>
@@ -32,8 +32,8 @@ const Market = (props) => {
                     {/* <p className='text-gray w-75'>Buy TLP tokens with your preferred assets. It takes around 18 minutes for the TRY broker to fill your buy orders, then the TLP tokens will be distributed to your wallet directly.</p> */}
                     {/* <p className='text-gray d-flex'><span className='text-white'>Contract: </span><span className='text-pink mx-1'> 0x3423...32432</span><FaClipboard className='cursor-pointer mt-1'/></p> */}
                 </div>
-                <div className='d-flex mt-3'>
-                    <div className='market-form w-50 window p-5 mr-2'>
+                <div className='d-flex mt-3 flex-wrap'>
+                    <div className={`market-form w-50 window ${isMobile == true ? `p-3`:`p-5`}`}>
                         <div className='market-form-input d-flex justify-content-center mt-3'>
                             <div className={`py-3 w-50 ${switchMarket == 1 && 'active'}`}><p className={`text-center ${switchMarket != 1 ? 'text-grey':'text-white'}`} onClick={() => setSwitchMarket(1)}>Sell TLP</p></div>
                             <div className={`py-3 w-50 ${switchMarket == 2 && 'active'}`}><p className={`text-center ${switchMarket != 2 ? 'text-grey ':'text-white'}`} onClick={() => setSwitchMarket(2)}>Buy TLP</p></div>
@@ -42,7 +42,7 @@ const Market = (props) => {
                             <p className='text-gray text-left'>Pay</p>
                             <div className='d-flex justify-content-between'>
                                 <input type='text' className='token-select-input' placeholder='0.0' />
-                                <div className='d-flex cursor-pointer token-select'><h5>Select Token</h5><FaAngleDown className='fs-26' /></div>
+                                <div className='d-flex cursor-pointer token-select'><h6>Select Token</h6><FaAngleDown className='fs-26' /></div>
                             </div>
                             <div className='d-flex justify-content-between py-3'>
                                 <div className='percent-item'><p>25%</p></div>
@@ -71,8 +71,8 @@ const Market = (props) => {
                         </div>                         
                         <div className='earn-button w-100 text-center py-2 border-radius mb-3'>Connect Wallet</div>
                     </div>
-                    <div className='w-50 pl-2'>
-                        <div className='market-form window p-5'>
+                    <div className={`w-50 ${isMobile == true ? ``:`pl-2`}`}>
+                        <div className={`market-form window ${isMobile == true ? `ml-0 mt-3 p-3`:`ml-2 p-5`}`}>
                             <div className='pt-3'>
                                 <div className='d-flex'>
                                     <img src={TokenIcon1} className='mr-3 img-circle' width={35} /> <h4>TLP</h4>
@@ -91,7 +91,7 @@ const Market = (props) => {
                                 </div>
                             </div>                         
                         </div>
-                        <div className='market-form window p-5 mt-3'>
+                        <div className={`market-form window  mt-3 ${isMobile == true ? `ml-0 p-3`:`ml-2 p-5`}`}>
                             <div className='pt-3'>
                                 <div className='d-flex'>
                                     <h4>Your TLP</h4>

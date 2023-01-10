@@ -32,7 +32,7 @@ const Liquidity = (props) => {
 
     return (
         <div className='pb-5'>
-            <div className='px-5 d-flex'>
+            <div className={`d-flex ${isMobile == true ? `px-3`:`px-5`}`}>
                 <div className='w-15 align-self-center'>
                 </div>
                 <div className='stats pt-5 w-65'>
@@ -43,7 +43,7 @@ const Liquidity = (props) => {
                         {/* <p className='text-gray pt-4'>Buy TLP tokens with your preferred assets. It takes around 18 minutes for the MUX broker to fill your buy orders, then the TLP tokens will be distributed to your wallet directly.</p>            */}
                     </div>
                     <div className='d-flex justify-content-between flex-wrap'>
-                        <div className='market-form window p-5 mt-3 w-49'>
+                        <div className={`market-form window mt-3 w-49 ${isMobile == true ? `p-3`:`p-5`}`}>
                             <div>
                                 <div className='d-flex'>
                                     <img src={TokenIcon1} width={35} className='img-circle' />
@@ -79,7 +79,7 @@ const Liquidity = (props) => {
                                 </div>
                             </div>                         
                         </div>
-                        <div className='ml-3 market-form window py-5 px-4 mt-3 w-49'>
+                        <div className={`market-form window py-5 mt-3 w-49 ${isMobile == true ? `ml-0 px-2`:`ml-3 px-4`}`}>
                             <div>
                                 <div className='d-flex'>
                                     <h4 className='font-bold'>Liquidity Pool</h4>
@@ -87,8 +87,8 @@ const Liquidity = (props) => {
                                 <div className='align-self-center donut px-0 pt-5'>
                                     <DonutChart
                                         className="dchart"
-                                        width={350}
-                                        height={250}
+                                        width={isMobile == true ? 320:350}
+                                        height={isMobile == true ? 200:250}
                                         innerRadius={0.8}
                                         selectedOffset={0}
                                         outerRadius={0.7}
@@ -120,8 +120,8 @@ const Liquidity = (props) => {
                         </div>
                         {/* <p className='text-gray pt-2'>The TLP pool consists of an assets portfolio; the assets are dynamically allocated for margin trading and third-party DEX mining.</p>            */}
                         <div className='pt-4'>
-                            <div className='d-flex'>
-                                <div className='w-50'>
+                            <div className='d-flex flex-wrap'>
+                                <div className={`${isMobile == true ? ``:`w-50`}`}>
                                     <div className='composition mr-2'>
                                         <div className='d-flex'>
                                             <img src={TokenIcon1} className='img-circle' />
@@ -145,8 +145,8 @@ const Liquidity = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='w-50'>
-                                    <div className='composition ml-2'>
+                                <div className={`${isMobile == true ? ``:`w-50`}`}>
+                                    <div className={`composition ${isMobile == true ? `mt-3`:`ml-2`}`}>
                                         <div className='d-flex'>
                                             <img src={TokenIcon2} className='img-circle' />
                                             <h4 className='font-bold ml-3 text-white'>ETH</h4>
@@ -171,7 +171,7 @@ const Liquidity = (props) => {
                                 </div>
                             </div>
                             <div className='d-flex pt-3'>
-                                <div className='w-50'>
+                                <div className={`${isMobile == true ? ``:`w-50`}`}>
                                     <div className='composition mr-2'>
                                         <div className='d-flex'>
                                             <img src={TokenIcon3} className='img-circle' />

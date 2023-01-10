@@ -27,6 +27,7 @@
     padding: 30px;
     border-radius: 25px;
     position: relative;
+    min-width: 370px;
 }
 .img-badge {
     background-color: #443C69;

@@ -45,3 +45,9 @@ hr {
 .w-49 {
     width: 49%;
 }
+
+@media only screen and (max-width: 500px) {
+    .w-65 {
+        width: 100%;
+    }
+}
