@@ -28,7 +28,7 @@ const Earn = (props) => {
 
     return (
         <div>
-            <div className='px-5 d-flex'>
+            <div className={`d-flex ${isMobile == true ? `px-3`:`px-5`}`}>
                 <div className='w-15 align-self-center'>
                 </div>
                 <div className='w-65 pb-3'>
@@ -37,8 +37,8 @@ const Earn = (props) => {
                         {/* <p className='text-gray w-75 font-regular'>Buy TLP tokens with your preferred assets. It takes around 18 minutes for the TRY broker to fill your buy orders, then the TLP tokens will be distributed to your wallet directly.</p> */}
                         {/* <p className='text-gray d-flex'><span className='text-white'>Contract: </span><span className='text-pink mx-1'> 0x3423...32432</span><FaClipboard className='cursor-pointer mt-1'/></p> */}
                     </div>
-                    <div className='d-flex mt-3'>
-                        <div className='market-form w-50 window p-5 mr-2'>
+                    <div className='d-flex mt-3 flex-wrap'>
+                        <div className={`market-form w-50 window ${isMobile == true ? `p-3`:`p-5`}`}>
                             <h4 className='mt-4'>Stake TLP</h4>  
                     
                             <div className='trade-token-select mb-2 p-4 mt-5'>
@@ -59,8 +59,8 @@ const Earn = (props) => {
                             </div>
                             <div className='earn-button w-100 text-center py-2 border-radius mb-3 mt-15'>Connect Wallet</div>
                         </div>
-                        <div className='w-50 pl-2'>
-                            <div className='market-form window p-5'>
+                        <div className='w-50'>
+                            <div className={`market-form window ${isMobile == true ? `p-3 mt-3 ml-0`:`ml-3 p-5 `}`}>
                                 <div className='pt-3'>
                                     <div className='d-flex'>
                                         <img src={TLP} className='mr-3 img-circle' width={35} /> <h4>TLP</h4>
@@ -79,7 +79,7 @@ const Earn = (props) => {
                                     </div>
                                 </div>                         
                             </div>
-                            <div className='market-form window p-5 mt-3'>
+                            <div className={`market-form window mt-3 ${isMobile == true ? `p-3 ml-0`:`p-5 ml-3`}`}>
                                 <div className='pt-3'>
                                     <div className='d-flex'>
                                         <h4>Your Stats</h4>

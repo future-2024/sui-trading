@@ -35,7 +35,7 @@
 
 @media only screen and (max-width: 480px) {
     .input-referral {    
-        width: 90%;
+        width: 100%;
         margin-top: 50px;
         padding: 40px 22px;
     }

@@ -29,13 +29,13 @@ const LockStake = (props) => {
     return (
         <div>
             {/* Lock stake */}
-            <div className='px-5 d-flex'>
+            <div className={`d-flex ${isMobile == true ? `px-3`:`px-5`}`}>
                 <div className='w-15 align-self-center'>
                 </div>
                 <div className='w-65 pb-3'>
                 <div className='mt-5'><h3 className='text-white font-bold'>gTRY Locked-Staking</h3></div>
-                    <div className='d-flex mt-3'>
-                        <div className='market-form w-50 window p-5 mr-2'>
+                    <div className='d-flex flex-wrap mt-3'>
+                        <div className={`market-form w-50 window ${isMobile == true ? `p-3`:`p-5`}`}>
                             <div className='d-flex justify-content-between'>
                                 <h4>Create Lock</h4>
                                 {/* <h6 className='text-pink mt-2'>Staking steps {`>`}</h6> */}
@@ -79,8 +79,8 @@ const LockStake = (props) => {
                             </div>       
                             <div className='earn-button w-100 text-center py-2 border-radius mb-3 mt-5'>Connect Wallet</div>
                         </div>
-                        <div className='w-50 pl-2'>
-                            <div className='market-form window p-5'>
+                        <div className='w-50'>
+                            <div className={`market-form window ${isMobile == true ? `p-3 mt-3 ml-0`:`ml-3 p-5 `}`}>
                                 <div className='pt-3'>
                                     <div className='d-flex'>
                                         <img src={TLP} className='mr-3 img-circle' width={35} /> <h4>gTRY</h4>
@@ -102,7 +102,7 @@ const LockStake = (props) => {
                                     </div>
                                 </div>                         
                             </div>
-                            <div className='market-form window p-5 mt-3'>
+                            <div className={`market-form window mt-3 ${isMobile == true ? `p-3 ml-0`:`p-5 ml-3`}`}>
                                 <div className='pt-3'>
                                     <div className='d-flex'>
                                         <h4>Your Stats</h4>

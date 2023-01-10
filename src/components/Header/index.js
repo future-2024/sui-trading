@@ -88,8 +88,14 @@ const Header = () => {
                                         <hr className='text-white' />
                                         <div className={`pt-1 ${menuItem !== 'home' ? '' : 'menu-active'}`} onClick={() => goLink('home')}><h4 className='text-white'>Dashboard</h4></div>
                                         <div className={`${menuItem !== 'trade' ? '' : 'menu-active'}`} onClick={() => goLink('trade')}><h4 className='text-white'>Trade</h4></div>
-                                        <div className={`${menuItem !== 'market' ? '' : 'menu-active'}`} onClick={() => goLink('market')}><h4 className='text-white'>Liquidity</h4></div>
-                                        <div className={`${menuItem !== 'earn' ? '' : 'menu-active'}`} onClick={() => goLink('earn')}><h4 className='text-white'>Earn</h4></div>
+                                        <div className={`${menuItem !== 'liquidity' ? '' : 'menu-active'}`} onClick={() => goLink('liquidity')}><h4 className='text-white'>Liquidity</h4></div>
+                                        <div className={`${menuItem !== 'earn' ? '' : 'menu-active'}`}>
+                                            <h4 className='text-white'>Earn</h4>
+                                            <div>
+                                                <div className='py-2 pl-3 text-gray font-bold' onClick={() => goLink('earn')}>Stake TLP</div>
+                                                <div className='py-2 pl-3 text-gray font-bold' onClick={() => goLink('earn/lockStake')}>Lock Stake</div>
+                                            </div>
+                                        </div>
                                         <div className={`${menuItem !== 'referral' ? '' : 'menu-active'}`} onClick={() => goLink('referral')}><h4 className='text-white'>Referral</h4></div>
                                         {/* <div className={`${menuItem !== 'liquidity' ? '' : 'menu-active'}`} onClick={() => goLink('liquidity')}><h4 className='text-white'>Liquidity</h4></div> */}
                                     </div>
