@@ -10,9 +10,9 @@ import BigNumber from "bignumber.js";
 import moment from 'moment';
 import Chart from 'react-apexcharts';
 
-import TokenIcon1 from '../../img/quotation/token-logo.png';
-import TokenIcon2 from '../../img/quotation/lbd-bnb.svg';
-import TokenIcon3 from '../../img/quotation/eth-bg.png';
+import TokenIcon1 from '../../img/quotation/SUI.png';
+import TokenIcon2 from '../../img/quotation/eth-bg.png';
+import TokenIcon3 from '../../img/quotation/BTC.svg';
 import TokenIcon4 from '../../img/quotation/BTC.svg';
 import EtherIcon from '../../img/quotation/pan-bg2.svg';
 
@@ -52,20 +52,19 @@ const Liquidity = (props) => {
             <div className='px-5 d-flex'>
                 <div className='w-15 align-self-center'>
                 </div>
-                <div className='w-65 stats pt-5'>
-                    <div className='px-4'>
+                <div className='stats pt-5 w-65'>
+                    <div>
                         <div className='d-flex justify-content-between'>
-                            <h4 className='text-white font-bold'>Liquidity Overview</h4>                            
-                            <div className='view-pool'>View pool address</div>
+                            <h4 className='text-white font-bold'>Liquidity Overview</h4>    
                         </div>
-                        <p className='text-gray pt-4'>Buy TLP tokens with your preferred assets. It takes around 18 minutes for the MUX broker to fill your buy orders, then the TLP tokens will be distributed to your wallet directly.</p>           
+                        {/* <p className='text-gray pt-4'>Buy TLP tokens with your preferred assets. It takes around 18 minutes for the MUX broker to fill your buy orders, then the TLP tokens will be distributed to your wallet directly.</p>            */}
                     </div>
-                    <div className='d-flex px-4 justify-content-between flex-wrap'>
+                    <div className='d-flex justify-content-between flex-wrap'>
                         <div className='market-form window p-5 mt-3 w-49'>
                             <div>
                                 <div className='d-flex'>
                                     <img src={TokenIcon1} width={35} className='img-circle' />
-                                    <h4 className='ml-3'>TLP</h4>
+                                    <h4 className='ml-3 font-bold'>TLP</h4>
                                 </div>
                                 <div className='d-flex justify-content-between'>
                                     <p className='text-gray py-2 pt-4'>Stake APR</p>
@@ -100,36 +99,27 @@ const Liquidity = (props) => {
                         <div className='ml-3 market-form window py-5 px-4 mt-3 w-49'>
                             <div>
                                 <div className='d-flex'>
-                                    <h4>Liquidity Multiplexing</h4>
+                                    <h4 className='font-bold'>Liquidity Pool</h4>
                                 </div>
                                 <div className='align-self-center donut px-0 pt-5'>
-                                    <Chart options={option1} series={series1} type="donut"  width="400"/>
+                                    <Chart options={option1} series={series1} type="donut"  width="450"/>
                                 </div>
                             </div>                         
                         </div>
                     </div>
 
-                    <div className='px-4 pt-5'>
+                    <div className='pt-5'>
                         <div className='d-flex justify-content-between'>
                             <h4 className='text-white font-bold'>Liquidity Composition</h4>
                         </div>
-                        <p className='text-gray pt-2'>The TLP pool consists of an assets portfolio; the assets are dynamically allocated for margin trading and third-party DEX mining.</p>           
+                        {/* <p className='text-gray pt-2'>The TLP pool consists of an assets portfolio; the assets are dynamically allocated for margin trading and third-party DEX mining.</p>            */}
                         <div className='pt-4'>
                             <div className='d-flex'>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
+                                <div className='w-50'>
+                                    <div className='composition mr-2'>
                                         <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
+                                            <img src={TokenIcon1} className='img-circle' />
+                                            <h4 className='font-bold ml-3 text-white'>SUI</h4>
                                         </div>
                                         <div className='d-flex justify-content-between'>
                                             <p className='font-bold text-gray py-2'>Price</p>
@@ -149,20 +139,11 @@ const Liquidity = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
+                                <div className='w-50'>
+                                    <div className='composition ml-2'>
                                         <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
+                                            <img src={TokenIcon2} className='img-circle' />
+                                            <h4 className='font-bold ml-3 text-white'>ETH</h4>
                                         </div>
                                         <div className='d-flex justify-content-between'>
                                             <p className='font-bold text-gray py-2'>Price</p>
@@ -183,21 +164,12 @@ const Liquidity = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='d-flex'>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
+                            <div className='d-flex pt-3'>
+                                <div className='w-50'>
+                                    <div className='composition mr-2'>
                                         <div className='d-flex'>
                                             <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
+                                            <h4 className='font-bold ml-3 text-white'>BTC</h4>
                                         </div>
                                         <div className='d-flex justify-content-between'>
                                             <p className='font-bold text-gray py-2'>Price</p>
@@ -216,244 +188,7 @@ const Liquidity = (props) => {
                                             <h5 className='py-2 text-white'>23.54%</h5>
                                         </div>
                                     </div>
-                                </div>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
-                                        <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Price</p>
-                                            <h5 className='py-2 text-white'>$1,214.6</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Total Pooled</p>
-                                            <h5 className='py-2 text-white'>$2,232,322</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Weight</p>
-                                            <h5 className='py-2 text-white'>23.54% / 25.99%</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Margin Trading Utilization</p>
-                                            <h5 className='py-2 text-white'>23.54%</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='d-flex'>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
-                                        <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Price</p>
-                                            <h5 className='py-2 text-white'>$1,214.6</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Total Pooled</p>
-                                            <h5 className='py-2 text-white'>$2,232,322</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Weight</p>
-                                            <h5 className='py-2 text-white'>23.54% / 25.99%</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Margin Trading Utilization</p>
-                                            <h5 className='py-2 text-white'>23.54%</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
-                                        <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Price</p>
-                                            <h5 className='py-2 text-white'>$1,214.6</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Total Pooled</p>
-                                            <h5 className='py-2 text-white'>$2,232,322</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Weight</p>
-                                            <h5 className='py-2 text-white'>23.54% / 25.99%</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Margin Trading Utilization</p>
-                                            <h5 className='py-2 text-white'>23.54%</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='d-flex'>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
-                                        <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Price</p>
-                                            <h5 className='py-2 text-white'>$1,214.6</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Total Pooled</p>
-                                            <h5 className='py-2 text-white'>$2,232,322</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Weight</p>
-                                            <h5 className='py-2 text-white'>23.54% / 25.99%</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Margin Trading Utilization</p>
-                                            <h5 className='py-2 text-white'>23.54%</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
-                                        <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Price</p>
-                                            <h5 className='py-2 text-white'>$1,214.6</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Total Pooled</p>
-                                            <h5 className='py-2 text-white'>$2,232,322</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Weight</p>
-                                            <h5 className='py-2 text-white'>23.54% / 25.99%</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Margin Trading Utilization</p>
-                                            <h5 className='py-2 text-white'>23.54%</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='d-flex'>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
-                                        <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Price</p>
-                                            <h5 className='py-2 text-white'>$1,214.6</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Total Pooled</p>
-                                            <h5 className='py-2 text-white'>$2,232,322</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Weight</p>
-                                            <h5 className='py-2 text-white'>23.54% / 25.99%</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Margin Trading Utilization</p>
-                                            <h5 className='py-2 text-white'>23.54%</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='w-50 p-3'>
-                                    <div className='composition'>
-                                        <div className='d-flex'>
-                                            <img src={TokenIcon3} className='img-circle' />
-                                            <h3 className='ml-3 text-white'>ETH</h3>
-                                        </div>
-                                        <div className='img-badge'>
-                                            <img src={TokenIcon1} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon2} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon3} className='img-circle-2' />
-                                            <h5>+</h5>
-                                            <img src={TokenIcon4} className='img-circle-2' />
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Price</p>
-                                            <h5 className='py-2 text-white'>$1,214.6</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Total Pooled</p>
-                                            <h5 className='py-2 text-white'>$2,232,322</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Weight</p>
-                                            <h5 className='py-2 text-white'>23.54% / 25.99%</h5>
-                                        </div>
-                                        <div className='d-flex justify-content-between'>
-                                            <p className='font-bold text-gray py-2'>Margin Trading Utilization</p>
-                                            <h5 className='py-2 text-white'>23.54%</h5>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 import Modal from 'react-modal';
-
+import "@fontsource/ibm-plex-sans";
 import './App.css';
 import './css/tailwind.output.css';
 import './font/font.css';
@@ -13,13 +13,10 @@ import Referral from './pages/Referral';
 import Earn from './pages/Earn';
 import Trade from './pages/Trade';
 import Market from './pages/Market';
-import Staking from './pages/Staking';
-import LockStake from './pages/LockStake';
 import Liquidity from './pages/Liquidity';
 
 import Header from './components/Header';
 
-import { ToastContainer, toast } from 'react-toastify';
 import { StoreContext } from './store';
 import { useSuiWallet } from './context/ConnectWallet/useSuiWallet';
 

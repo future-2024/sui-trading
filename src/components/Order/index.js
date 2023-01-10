@@ -21,20 +21,22 @@ const Order = () => {
         <div className='order py-2 mt-2'>
             <div className='order-header d-flex'>
                 <p className={`${orderIndex == 1 ? 'active' : ''}`} onClick={() => setOrderIndex(1)}>Position</p>
-                <p className={`${orderIndex == 2 ? 'active' : ''}`} onClick={() => setOrderIndex(2)}>Orders</p>
-                <p className={`${orderIndex == 3 ? 'active' : ''}`} onClick={() => setOrderIndex(3)}>Traders</p>
+                <p className={`${orderIndex == 2 ? 'active' : ''}`} onClick={() => setOrderIndex(2)}>Open Orders</p>
+                <p className={`${orderIndex == 3 ? 'active' : ''}`} onClick={() => setOrderIndex(3)}>Trades</p>
             </div> 
             {orderIndex == 1 && (
                 <div className='order-content'>
                         {!isMobile && (                            
                             <div className='order-content-top d-flex'>
-                                <p>Positions</p>
-                                <p>NET value</p>
+                                <p>Market</p>
                                 <p>Size</p>
+                                <p>NET value</p>
                                 <p>Collateral</p>
-                                <p>Mark Price</p>
                                 <p>Entry Price</p>
+                                <p>Mark Price</p>
                                 <p>Liq. Price</p>                                    
+                                <p>PNL & ROE</p>                                    
+                                <p>Actions</p>                                    
                             </div>
                         )}
                     <hr className='text-gray my-0'/>
@@ -47,10 +49,13 @@ const Order = () => {
                 <div className='order-content'>
                     {!isMobile && (
                         <div className='order-content-top d-flex'>
-                            <p>Type</p>
-                            <p>Order</p>
+                            <p>Time</p>
+                            <p>Market & Side</p>
+                            <p>Operation & Type</p>
                             <p>Price</p>
-                            <p>Market Price</p>
+                            <p>Amount</p>
+                            <p>Collateral</p>
+                            <p>Actions</p>
                         </div>
                     )}                    
                     <hr className='text-gray my-0'/>

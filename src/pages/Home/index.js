@@ -9,10 +9,10 @@ import Countdown from 'react-countdown';
 import BigNumber from "bignumber.js";
 import moment from 'moment';
 
-import TokenIcon1 from '../../img/quotation/token-logo.png';
-import TokenIcon2 from '../../img/quotation/lbd-bnb.svg';
-import TokenIcon3 from '../../img/quotation/eth-bg.png';
-import EtherIcon from '../../img/quotation/pan-bg2.svg';
+import TokenIcon1 from '../../img/quotation/SUI.png';
+import TokenIcon2 from '../../img/quotation/eth-bg.png';
+import TokenIcon3 from '../../img/quotation/BTC.svg';
+import TLP from '../../img/quotation/token-logo.png';
 
 import { FaAngleDown } from 'react-icons/fa';
 
@@ -157,7 +157,7 @@ const Home = (props) => {
                     <div className='d-flex px-4 justify-content-between flex-wrap'>
                         <div className='overview mt-3 w-3'>
                             <div className='d-flex py-3 px-4'>
-                                <img src={TokenIcon1} className='token-logo' />
+                                <img src={TLP} className='token-logo' />
                                 <div className='px-2'>
                                     <h6 className='text-white mb-0'>TRY</h6>
                                     <p className='fs-12 text-gray'>Tradeify coin</p>
@@ -196,7 +196,7 @@ const Home = (props) => {
 
                         <div className='overview mt-3 w-3'>
                             <div className='d-flex py-3 px-4'>
-                                <img src={TokenIcon1} width={35} className='token-logo' />
+                                <img src={TLP} width={35} className='token-logo' />
                                 <div className='px-2'>
                                     <h6 className='text-white mb-0'>TLP</h6>
                                     <p className='fs-12 text-gray'>TLP</p>
@@ -257,7 +257,25 @@ const Home = (props) => {
                                         <div>
                                             <div className='d-flex py-1'>
                                                 <div className='w-20 d-flex'>
-                                                    <img src={TokenIcon3} width={40} height={20} />
+                                                    <img src={TokenIcon1} width={40} height={20} />
+                                                    <div className='pl-4'>
+                                                        <h6 className='mb-0'>Sui</h6>
+                                                        <p className='text-gray text-left'>SUI</p>
+                                                    </div>
+                                                    <FaAngleDown className='text-white mt-1 ml-3 cursor-pointer'/>
+                                                </div>
+                                                <div className='w-20'><h6 className='text-gray'>$801,953,731</h6></div>
+                                                <div className='w-20'><h6 className='text-gray'>$801,953,731</h6></div>
+                                                <div className='w-20'><h6 className='text-gray'>34.5% / 45%</h6></div>
+                                                <div className='w-20'><h6 className='text-gray'>46.20%</h6></div>
+                                            </div>
+                                            <hr className='text-gray my-1'/>
+                                        </div>)}
+                                        {!isMobile && (
+                                        <div>
+                                            <div className='d-flex py-1'>
+                                                <div className='w-20 d-flex'>
+                                                    <img src={TokenIcon2} className='token-logo' />
                                                     <div className='pl-4'>
                                                         <h6 className='mb-0'>Ethereum</h6>
                                                         <p className='text-gray text-left'>ETH</p>
@@ -275,28 +293,10 @@ const Home = (props) => {
                                         <div>
                                             <div className='d-flex py-1'>
                                                 <div className='w-20 d-flex'>
-                                                    <img src={TokenIcon1} className='token-logo' />
+                                                    <img src={TokenIcon3} width={40} height={20} />
                                                     <div className='pl-4'>
-                                                        <h6 className='mb-0'>Tradeify</h6>
-                                                        <p className='text-gray text-left'>TRY</p>
-                                                    </div>
-                                                    <FaAngleDown className='text-white mt-1 ml-3 cursor-pointer'/>
-                                                </div>
-                                                <div className='w-20'><h6 className='text-gray'>$801,953,731</h6></div>
-                                                <div className='w-20'><h6 className='text-gray'>$801,953,731</h6></div>
-                                                <div className='w-20'><h6 className='text-gray'>34.5% / 45%</h6></div>
-                                                <div className='w-20'><h6 className='text-gray'>46.20%</h6></div>
-                                            </div>
-                                            <hr className='text-gray my-1'/>
-                                        </div>)}
-                                        {!isMobile && (
-                                        <div>
-                                            <div className='d-flex py-1'>
-                                                <div className='w-20 d-flex'>
-                                                    <img src={TokenIcon2} width={40} height={20} />
-                                                    <div className='pl-4'>
-                                                        <h6 className='mb-0'>Binance Smart Chain</h6>
-                                                        <p className='text-gray text-left'>BSC</p>
+                                                        <h6 className='mb-0'>Bitcoin</h6>
+                                                        <p className='text-gray text-left'>BTC</p>
                                                     </div>
                                                     <FaAngleDown className='text-white mt-1 ml-3 cursor-pointer'/>
                                                 </div>
@@ -310,7 +310,41 @@ const Home = (props) => {
                                         <div>
                                             <div className='py-0'>
                                                 <div className='w-100 d-flex pl-3 pb-2'>
-                                                    <img src={TokenIcon3} width={40} height={20} />
+                                                    <img src={TokenIcon1} width={40} height={20} />
+                                                    <div className='pl-4'>
+                                                        <h6 className='mb-0'>Sui</h6>
+                                                        <p className='text-gray text-left'>SUI</p>
+                                                    </div>
+                                                    <FaAngleDown className='text-white mt-1 ml-3 cursor-pointer'/>
+                                                </div>
+                                                <div className='d-flex justify-content-between'>
+                                                    <div className='w-50'><p className='text-gray pl-3'>Token</p></div>
+                                                    <div className='w-50'><h6 className='text-gray'>$801,953,731</h6></div>
+                                                </div>
+                                                <div className='d-flex justify-content-between'>
+                                                    <div className='w-50'><p className='text-gray pl-3'>Price</p></div>
+                                                    <div className='w-50'><h6 className='text-gray'>$801,953,731</h6></div>
+                                                </div>
+                                                <div className='d-flex justify-content-between'>
+                                                    <div className='w-50'><p className='text-gray pl-3'>Pool</p></div>
+                                                    <div className='w-50'><h6 className='text-gray'>$801,953,731</h6></div>
+                                                </div>
+                                                <div className='d-flex justify-content-between'>
+                                                    <div className='w-50'><p className='text-gray pl-3'>Weight</p></div>
+                                                    <div className='w-50'><h6 className='text-gray'>34.5% / 45%</h6></div>
+                                                </div>
+                                                <div className='d-flex justify-content-between'>
+                                                    <div className='w-50'><p className='text-gray pl-3'>Utilization</p></div>
+                                                    <div className='w-50'><h6 className='text-gray'>46.20%</h6></div>
+                                                </div>                                                
+                                                <hr className='text-gray my-1'/>
+                                            </div>
+                                        </div>)}
+                                        {isMobile && (
+                                        <div>
+                                            <div className='py-0'>
+                                                <div className='w-100 d-flex pl-3 pb-2'>
+                                                    <img src={TokenIcon2} width={40} height={20}  className='token-logo'/>
                                                     <div className='pl-4'>
                                                         <h6 className='mb-0'>Ethereum</h6>
                                                         <p className='text-gray text-left'>ETH</p>
@@ -344,44 +378,10 @@ const Home = (props) => {
                                         <div>
                                             <div className='py-0'>
                                                 <div className='w-100 d-flex pl-3 pb-2'>
-                                                    <img src={TokenIcon1} width={40} height={20}  className='token-logo'/>
+                                                    <img src={TokenIcon3} width={40} height={20} />
                                                     <div className='pl-4'>
-                                                        <h6 className='mb-0'>Tradeify</h6>
-                                                        <p className='text-gray text-left'>TRY</p>
-                                                    </div>
-                                                    <FaAngleDown className='text-white mt-1 ml-3 cursor-pointer'/>
-                                                </div>
-                                                <div className='d-flex justify-content-between'>
-                                                    <div className='w-50'><p className='text-gray pl-3'>Token</p></div>
-                                                    <div className='w-50'><h6 className='text-gray'>$801,953,731</h6></div>
-                                                </div>
-                                                <div className='d-flex justify-content-between'>
-                                                    <div className='w-50'><p className='text-gray pl-3'>Price</p></div>
-                                                    <div className='w-50'><h6 className='text-gray'>$801,953,731</h6></div>
-                                                </div>
-                                                <div className='d-flex justify-content-between'>
-                                                    <div className='w-50'><p className='text-gray pl-3'>Pool</p></div>
-                                                    <div className='w-50'><h6 className='text-gray'>$801,953,731</h6></div>
-                                                </div>
-                                                <div className='d-flex justify-content-between'>
-                                                    <div className='w-50'><p className='text-gray pl-3'>Weight</p></div>
-                                                    <div className='w-50'><h6 className='text-gray'>34.5% / 45%</h6></div>
-                                                </div>
-                                                <div className='d-flex justify-content-between'>
-                                                    <div className='w-50'><p className='text-gray pl-3'>Utilization</p></div>
-                                                    <div className='w-50'><h6 className='text-gray'>46.20%</h6></div>
-                                                </div>                                                
-                                                <hr className='text-gray my-1'/>
-                                            </div>
-                                        </div>)}
-                                        {isMobile && (
-                                        <div>
-                                            <div className='py-0'>
-                                                <div className='w-100 d-flex pl-3 pb-2'>
-                                                    <img src={TokenIcon2} width={40} height={20} />
-                                                    <div className='pl-4'>
-                                                        <h6 className='mb-0'>Binance Smart Chain</h6>
-                                                        <p className='text-gray text-left'>BSC</p>
+                                                        <h6 className='mb-0'>Bitcoin</h6>
+                                                        <p className='text-gray text-left'>BTC</p>
                                                     </div>
                                                     <FaAngleDown className='text-white mt-1 ml-3 cursor-pointer'/>
                                                 </div>

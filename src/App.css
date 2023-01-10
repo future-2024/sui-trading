@@ -1,9 +1,10 @@
 body {
     background-color: #241F3E!important;
-    font-family: "Space Grotesk"!important;
+    font-family: "IBM Plex Sans"!important;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Space Grotesk"!important;
+    font-family: "IBM Plex Sans"!important;
+    font-weight: 500!important;
 }
 .wallet-item {
     border: 2px solid rgba(230, 230, 230, 0.484);
@@ -21,4 +22,16 @@ hr {
     border: 0;
     border-top: 1px solid #a9a9ca3d!important;
     border-top: 1px solid var(--rs-border-primary);
+}
+.font-bold {
+    font-weight: 700!important;
+}
+.w-15 {
+    width: 15%;
+}
+.w-65 {
+    width: 65%;
+}
+.w-49 {
+    width: 49%;
 }

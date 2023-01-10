@@ -18,7 +18,6 @@ const Header = () => {
     const location = useLocation();
     const global = useContext(StoreContext);
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
-    const [isShowModal, setIsShowModal] = useState(false);
     const [menuItem, setMenuItem] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
 
@@ -51,20 +50,20 @@ const Header = () => {
             <div className='container'>
                 <div className='d-flex justify-content-between'>
                     <div className='d-flex'>
-                        <div className='m-auto logo cursor-pointer d-flex' onClick={() => goLink('home')}><img src={Logo} className='brand-logo align-self-center mt-1' width={35} /><h3 className='text-white ml-2 mt-1 font-bold mr-3'>Tradeify</h3></div>
+                        <div className='m-auto logo cursor-pointer d-flex' onClick={() => goLink('home')}><img src={Logo} className='brand-logo align-self-center mt-1' width={35} /><h3 className='text-white ml-2 mt-1 font-bold mr-3'>TRADEIFY</h3></div>
                         {!isTabletOrMobile && (
-                            <div className='d-flex align-self-center'>
+                            <div className='d-flex align-self-center mt-1'>
                                 <div className='px-4' onClick={() => goLink('home')}><p className={`cursor-pointer ${menuItem !== 'home' ? 'text-gray' : 'text-white'}`}>Dashbaord</p></div>
                                 <div className='px-4' onClick={() => goLink('trade')}><p className={`cursor-pointer ${menuItem !== 'trade' ? 'text-gray' : 'text-white'}`}>Trade</p></div>
+                                <div className='px-4' onClick={() => goLink('liquidity')}><p className={`cursor-pointer ${menuItem !== 'liquidity' ? 'text-gray' : 'text-white'}`}>Liquidity</p></div>
                                 <div className='px-4' onClick={() => goLink('earn')}><p className={`cursor-pointer ${menuItem !== 'earn' ? 'text-gray' : 'text-white'}`}>Earn</p></div>
                                 <div className='px-4' onClick={() => goLink('referral')}><p className={`cursor-pointer ${menuItem !== 'referral' ? 'text-gray' : 'text-white'}`}>Referral</p></div>
-                                <div className='px-4' onClick={() => goLink('market')}><p className={`cursor-pointer ${menuItem !== 'market' ? 'text-gray' : 'text-white'}`}>Liquidity</p></div>
-                                <div className='px-4' onClick={() => goLink('liquidity')}><p className={`cursor-pointer ${menuItem !== 'liquidity' ? 'text-gray' : 'text-white'}`}>Liquidity</p></div>
+                                <div className='px-4' onClick={() => goLink('market')}><p className={`cursor-pointer ${menuItem !== 'market' ? 'text-gray' : 'text-white'}`}>Market</p></div>
                             </div>
                         )}
                         {isTabletOrMobile && (
-                            <div>
-                                <div className='d-flex mt-2 ml-3'>
+                            <div className='mt-2'>
+                                <div className='d-flex mt-2'>
                                     <FaList className='text-white fs-24' onClick={showModal}/>
                                 </div>
                                 {isMenu && (
@@ -76,9 +75,9 @@ const Header = () => {
                                         <hr className='text-white' />
                                         <div className={`pt-1 ${menuItem !== 'home' ? '' : 'menu-active'}`} onClick={() => goLink('home')}><h4 className='text-white'>Dashboard</h4></div>
                                         <div className={`${menuItem !== 'trade' ? '' : 'menu-active'}`} onClick={() => goLink('trade')}><h4 className='text-white'>Trade</h4></div>
+                                        <div className={`${menuItem !== 'market' ? '' : 'menu-active'}`} onClick={() => goLink('market')}><h4 className='text-white'>Liquidity</h4></div>
                                         <div className={`${menuItem !== 'earn' ? '' : 'menu-active'}`} onClick={() => goLink('earn')}><h4 className='text-white'>Earn</h4></div>
                                         <div className={`${menuItem !== 'referral' ? '' : 'menu-active'}`} onClick={() => goLink('referral')}><h4 className='text-white'>Referral</h4></div>
-                                        <div className={`${menuItem !== 'market' ? '' : 'menu-active'}`} onClick={() => goLink('market')}><h4 className='text-white'>Liquidity</h4></div>
                                         <div className={`${menuItem !== 'liquidity' ? '' : 'menu-active'}`} onClick={() => goLink('liquidity')}><h4 className='text-white'>Liquidity</h4></div>
                                     </div>
                                 )}                                
@@ -87,10 +86,10 @@ const Header = () => {
                     </div>  
                     <div>
                         {account == undefined && (
-                            <div className='button d-flex' onClick={connectWallet}><div className='align-self-center'><img src={WalletIcon} className='wallet' /></div><p className='mb-0 ml-1 lh-33 align-self-center'>Connect Wallet</p></div>
+                            <div className='button d-flex mt-2' onClick={connectWallet}><div className='align-self-center'><img src={WalletIcon} className='wallet' /></div><p className='mb-0 ml-1 lh-33 align-self-center'>Connect Wallet</p></div>
                         )}
                         {account != undefined && (
-                            <div className='button d-flex' onClick={disconnectWallet}><div className='align-self-center'><img src={WalletIcon} className='wallet' /></div><p className='mb-0 ml-1 lh-33 align-self-center'>{ExportAddress(account)}</p></div>
+                            <div className='button d-flex mt-2' onClick={disconnectWallet}><div className='align-self-center'><img src={WalletIcon} className='wallet' /></div><p className='mb-0 ml-1 lh-33 align-self-center'>{ExportAddress(account)}</p></div>
                         )}
                     </div>  
                 </div>
