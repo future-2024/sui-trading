@@ -13,13 +13,13 @@ import Chart from 'react-apexcharts';
 import TokenIcon1 from '../../img/quotation/SUI.png';
 import TokenIcon2 from '../../img/quotation/eth-bg.png';
 import TokenIcon3 from '../../img/quotation/BTC.svg';
-import TokenIcon4 from '../../img/quotation/BTC.svg';
-import EtherIcon from '../../img/quotation/pan-bg2.svg';
 
 
 import { useMediaQuery } from 'react-responsive';
-import { FaAccessibleIcon, FaAlignJustify, FaAngleDown, FaClipboard, FaKeyboard, FaKey } from 'react-icons/fa';
+import { FaAccessibleIcon } from 'react-icons/fa';
+
 const Liquidity = (props) => {
+    const history = useHistory();    
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
     const [series1, setSeries1] = useState([75, 25, 11]);
     const [option1, setOption1] = useState({
@@ -46,6 +46,10 @@ const Liquidity = (props) => {
             }
         }]
     });
+    
+    const goLink = (text) => {
+        history.push("/" + text);
+    }
 
     return (
         <div className='pb-5'>
@@ -91,7 +95,7 @@ const Liquidity = (props) => {
                                     <div className='py-2 text-grey-sharp'>$0.782</div>
                                 </div>
                                 <div className='d-flex mt-3'>
-                                    <div className='earn-button w-100 text-center py-2 border-radius mb-3 mr-2'>Buy / Sell TLP</div>
+                                    <div className='earn-button w-100 text-center py-2 border-radius mb-3 mr-2' onClick={() => goLink('market')}>Buy / Sell TLP</div>
                                     <div className='earn-button-grey w-100 text-center  py-2 border-radius mb-3 ml-2'>Stake TLP</div>
                                 </div>
                             </div>                         

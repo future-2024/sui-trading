@@ -21,7 +21,7 @@ const Referral = (props) => {
     return (
         <div className='py-5 px-5'>
             <div className='text-center container'>
-                <div className='mt-5'><h3 className='text-white'>Referrals</h3></div>
+                <div className='mt-5'><h3 className='text-white font-bold'>Referrals</h3></div>
                 <div><p className='text-gray'>Get fee discounts and earn rebates through the Tradeify referral program{!isMobile && (<br />)}For more information, please read the <span className='text-decoration-underline'>referral program details.</span></p></div>
                 <Switch />
                 <div className='input-referral'>

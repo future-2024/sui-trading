@@ -23,6 +23,16 @@ hr {
     border-top: 1px solid #a9a9ca3d!important;
     border-top: 1px solid var(--rs-border-primary);
 }
+.board {
+    background-color: #494172;
+    border-radius: 5px;
+    padding: 6px 12px;
+    text-align: left;
+    margin: 12px 0;
+}
+.text-gray-sharp {
+    color: #cdc8d7;
+}
 .font-bold {
     font-weight: 700!important;
 }

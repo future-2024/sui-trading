@@ -15,7 +15,7 @@ import { FaAngleDown, FaClipboard } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
 import {useHistory} from 'react-router-dom';
 
-import TokenIcon1 from '../../img/quotation/SUI.png';
+import TokenIcon1 from '../../img/quotation/token-logo.png';
 
 import ExchangeLogo from '../../img/quotation/exchange.png';
 
@@ -27,10 +27,10 @@ const Market = (props) => {
             <div className='w-15'>
             </div>
             <div className='w-65 pb-3'>
-                <div className='mt-5'><h3 className='text-white'>BUY/SELL TLP</h3></div>
+                <div className='mt-5'><h3 className='text-white font-bold'>BUY/SELL TLP</h3></div>
                 <div className='d-flex justify-content-between'>
-                    <p className='text-gray w-75'>Buy TLP tokens with your preferred assets. It takes around 18 minutes for the TRY broker to fill your buy orders, then the TLP tokens will be distributed to your wallet directly.</p>
-                    <p className='text-gray d-flex'><span className='text-white'>Contract: </span><span className='text-pink mx-1'> 0x3423...32432</span><FaClipboard className='cursor-pointer mt-1'/></p>
+                    {/* <p className='text-gray w-75'>Buy TLP tokens with your preferred assets. It takes around 18 minutes for the TRY broker to fill your buy orders, then the TLP tokens will be distributed to your wallet directly.</p> */}
+                    {/* <p className='text-gray d-flex'><span className='text-white'>Contract: </span><span className='text-pink mx-1'> 0x3423...32432</span><FaClipboard className='cursor-pointer mt-1'/></p> */}
                 </div>
                 <div className='d-flex mt-3'>
                     <div className='market-form w-50 window p-5 mr-2'>
@@ -75,7 +75,7 @@ const Market = (props) => {
                         <div className='market-form window p-5'>
                             <div className='pt-3'>
                                 <div className='d-flex'>
-                                    <img src={TokenIcon1} className='mr-3' width={35} /> <h4>TLP</h4>
+                                    <img src={TokenIcon1} className='mr-3 img-circle' width={35} /> <h4>TLP</h4>
                                 </div>
                                 <div className='d-flex justify-content-between pt-3'>
                                     <p className='text-gray py-2 pt-3'>Stake APR</p>

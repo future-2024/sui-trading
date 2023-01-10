@@ -20,7 +20,7 @@ const Header = () => {
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
     const [menuItem, setMenuItem] = useState(false);
     const [isMenu, setIsMenu] = useState(false);
-
+    const [isEarnMenu, setIsEarnMenu] = useState(false);
     const { account, connected, connecting, connect, disconnect } = useSuiWallet();
 
 
@@ -31,6 +31,7 @@ const Header = () => {
         history.push("/" + text);
         setMenuItem(text);
         setIsMenu(false);
+        setIsEarnMenu(false);
     }
     const getItem = () => {        
         const path = location.pathname.split("/")[1];
@@ -41,6 +42,9 @@ const Header = () => {
     }
     const connectWallet = () => {
         global.setModalIsOpen(true);
+    }
+    const openEarnMenu = () => {
+        setIsEarnMenu(true);
     }
     useEffect(() => {
         getItem();
@@ -56,9 +60,18 @@ const Header = () => {
                                 <div className='px-4' onClick={() => goLink('home')}><p className={`cursor-pointer ${menuItem !== 'home' ? 'text-gray' : 'text-white'}`}>Dashbaord</p></div>
                                 <div className='px-4' onClick={() => goLink('trade')}><p className={`cursor-pointer ${menuItem !== 'trade' ? 'text-gray' : 'text-white'}`}>Trade</p></div>
                                 <div className='px-4' onClick={() => goLink('liquidity')}><p className={`cursor-pointer ${menuItem !== 'liquidity' ? 'text-gray' : 'text-white'}`}>Liquidity</p></div>
-                                <div className='px-4' onClick={() => goLink('earn')}><p className={`cursor-pointer ${menuItem !== 'earn' ? 'text-gray' : 'text-white'}`}>Earn</p></div>
+                                
+                                <div className='px-4 position-relative' onMouseEnter={openEarnMenu}>
+                                    <p className={`cursor-pointer ${menuItem !== 'earn' ? 'text-gray' : 'text-white'}`}>Earn</p>                                    
+                                    {isEarnMenu && (
+                                        <div className='stake-menu'>
+                                            <div className='py-2' onClick={() => goLink('earn')}>Stake TLP</div>
+                                            <div className='py-2' onClick={() => goLink('earn/lockStake')}>Lock Stake</div>
+                                        </div>
+                                    )}
+                                </div>
+
                                 <div className='px-4' onClick={() => goLink('referral')}><p className={`cursor-pointer ${menuItem !== 'referral' ? 'text-gray' : 'text-white'}`}>Referral</p></div>
-                                <div className='px-4' onClick={() => goLink('market')}><p className={`cursor-pointer ${menuItem !== 'market' ? 'text-gray' : 'text-white'}`}>Market</p></div>
                             </div>
                         )}
                         {isTabletOrMobile && (
@@ -78,7 +91,7 @@ const Header = () => {
                                         <div className={`${menuItem !== 'market' ? '' : 'menu-active'}`} onClick={() => goLink('market')}><h4 className='text-white'>Liquidity</h4></div>
                                         <div className={`${menuItem !== 'earn' ? '' : 'menu-active'}`} onClick={() => goLink('earn')}><h4 className='text-white'>Earn</h4></div>
                                         <div className={`${menuItem !== 'referral' ? '' : 'menu-active'}`} onClick={() => goLink('referral')}><h4 className='text-white'>Referral</h4></div>
-                                        <div className={`${menuItem !== 'liquidity' ? '' : 'menu-active'}`} onClick={() => goLink('liquidity')}><h4 className='text-white'>Liquidity</h4></div>
+                                        {/* <div className={`${menuItem !== 'liquidity' ? '' : 'menu-active'}`} onClick={() => goLink('liquidity')}><h4 className='text-white'>Liquidity</h4></div> */}
                                     </div>
                                 )}                                
                             </div>

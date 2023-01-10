@@ -14,6 +14,7 @@ import Earn from './pages/Earn';
 import Trade from './pages/Trade';
 import Market from './pages/Market';
 import Liquidity from './pages/Liquidity';
+import LockStake from './pages/LockStake';
 
 import Header from './components/Header';
 
@@ -77,6 +78,7 @@ function App() {
           <Route path="/trade" exact component={Trade} />
           <Route path="/market" exact component={Market} />
           <Route path="/liquidity" exact component={Liquidity} />
+          <Route path="/earn/lockStake" exact component={LockStake} />
         </Switch>
 
         <Modal
