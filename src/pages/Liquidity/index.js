@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import $ from 'jquery';
+
 import './index.css';
+import './style.css';
+
 import Header from '../../components/Header'
 import Web3 from 'web3';
 import {useHistory} from 'react-router-dom';
@@ -8,7 +11,7 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import Countdown from 'react-countdown';
 import BigNumber from "bignumber.js";
 import moment from 'moment';
-import Chart from 'react-apexcharts';
+import DonutChart from 'react-donut-chart';
 
 import TokenIcon1 from '../../img/quotation/SUI.png';
 import TokenIcon2 from '../../img/quotation/eth-bg.png';
@@ -21,31 +24,7 @@ import { FaAccessibleIcon } from 'react-icons/fa';
 const Liquidity = (props) => {
     const history = useHistory();    
     const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
-    const [series1, setSeries1] = useState([75, 25, 11]);
-    const [option1, setOption1] = useState({
-        title: {
-            text:'',
-            align: 'center',
-            style: {
-                color:'white'
-            }
-        },
-        plotOptions: {
-            area: undefined,
-        },
-        labels:['TLP margin Trading', 'TLP margin Trading', 'TLP margin Trading'],
-        chart: {
-            type: 'donut',
-        },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                width: 300
-                }
-            }
-        }]
-    });
+    
     
     const goLink = (text) => {
         history.push("/" + text);
@@ -106,7 +85,30 @@ const Liquidity = (props) => {
                                     <h4 className='font-bold'>Liquidity Pool</h4>
                                 </div>
                                 <div className='align-self-center donut px-0 pt-5'>
-                                    <Chart options={option1} series={series1} type="donut"  width="450"/>
+                                    <DonutChart
+                                        className="dchart"
+                                        width={350}
+                                        height={250}
+                                        innerRadius={0.8}
+                                        selectedOffset={0}
+                                        outerRadius={0.7}
+                                        legend={true}
+                                        colors={["rgb(92, 211, 255)", "rgb(6, 114, 255)", "rgb(254, 142, 14)"]}
+                                        data={[
+                                            {
+                                            label: "SUI",
+                                            value: 15
+                                            },
+                                            {
+                                            label: "Ethereum",
+                                            value: 30
+                                            },
+                                            {
+                                            label: "Bitcoin",
+                                            value: 45
+                                            }
+                                        ]}
+                                    />
                                 </div>
                             </div>                         
                         </div>

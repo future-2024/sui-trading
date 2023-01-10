@@ -1,0 +1,25 @@
+
+.dchart-innertext-value {
+    display: none;
+    /* color: white; */
+}
+.dchart-innertext-label {
+    fill: #e7e7e7;
+    font-size: 20px;
+}
+.dchart-arcs-path {
+    stroke: rgba(108, 81, 219, 0.349);
+}
+.dchart-legend-item-label {
+    fill: white;
+}
+rect {
+    stroke: rgba(108, 81, 219, 0.349);
+    rx: 20;
+    ry: 20;
+}
+.dchart-legend {
+    border: 1px solid black !important;
+    color: rgb(6, 114, 255);
+}
+  
