@@ -82,4 +82,11 @@ p {
     .w-80 {
         width: 90%;
     }
+    .w-1, .w-2, .w-3, .w-4, .w-5 {
+        width: 100%;
+        min-width: auto;
+    }
+    .overview-body > div > div {
+        padding: 11px 12px;
+    }
 }

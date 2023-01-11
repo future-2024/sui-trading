@@ -38,7 +38,7 @@ const Earn = (props) => {
                         {/* <p className='text-gray d-flex'><span className='text-white'>Contract: </span><span className='text-pink mx-1'> 0x3423...32432</span><FaClipboard className='cursor-pointer mt-1'/></p> */}
                     </div>
                     <div className='d-flex mt-3 flex-wrap'>
-                        <div className={`market-form w-50 window ${isMobile == true ? `p-3`:`p-5`}`}>
+                        <div className={`market-form window ${isMobile == true ? `p-3`:`w-50 p-5`}`}>
                             <h4 className='mt-4'>Stake TLP</h4>  
                     
                             <div className='trade-token-select mb-2 p-4 mt-5'>
@@ -59,7 +59,7 @@ const Earn = (props) => {
                             </div>
                             <div className='earn-button w-100 text-center py-2 border-radius mb-3 mt-15'>Connect Wallet</div>
                         </div>
-                        <div className='w-50'>
+                        <div className={`${isMobile == true ? `w-100`:`w-50`}`}>
                             <div className={`market-form window ${isMobile == true ? `p-3 mt-3 ml-0`:`ml-3 p-5 `}`}>
                                 <div className='pt-3'>
                                     <div className='d-flex'>

@@ -40,7 +40,7 @@ const Trade = (props) => {
                 <div className='t-w-1'>
                     <div className='trade-header d-flex justify-content-between'>
                         <div className='d-flex'>
-                            <h4 className='text-white m-auto cursor-pointer' onClick={() => setIsMarketMenu(true)}>{market}/USD</h4>
+                            <h4 className='text-white m-auto cursor-pointer token-title' onClick={() => setIsMarketMenu(true)}>{market}/USD</h4>
                             <FaAngleDown className='m-auto fs-28 text-white' />
                         </div>
                         <div className='d-flex trade-result flex-wrap justify-content-between'>

@@ -78,11 +78,11 @@ const Home = (props) => {
         <div className='pb-5'>
             <div className='container'>
                 <div className='stats pt-5'>
-                    <div className='px-4'>
+                    <div className='px-3'>
                         <h4 className='text-white font-bold'>Stats</h4>
                         {/* <p>Arbitrum Total Stats start from 01 Sep 2021 <br/>For detailed stats: https://stats.TRY.io.</p> */}
                     </div>
-                    <div className='d-flex px-4 justify-content-between flex-wrap'>
+                    <div className='d-flex px-3 justify-content-between flex-wrap'>
                         <div className='overview mt-3 w-1'>
                             <div><h5 className='text-white px-4 pt-3'>Overview</h5></div>
                             <hr className='text-white mx-4'/>
@@ -150,11 +150,11 @@ const Home = (props) => {
                     </div>
                 </div>
                 <div className='stats'>
-                    <div className='px-4'>
+                    <div className='px-3'>
                         <h4 className='text-white font-bold'>Tokens</h4>
                         <p>Platform and TLP index tokens.</p>
                     </div>
-                    <div className='d-flex px-4 justify-content-between flex-wrap'>
+                    <div className='d-flex px-3 justify-content-between flex-wrap'>
                         <div className='overview mt-3 w-3'>
                             <div className='d-flex py-3 px-4'>
                                 <img src={TLP} className='token-logo' />
@@ -233,7 +233,7 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className='px-4'>
+                    <div className='px-3'>
                         <div className='overview mt-3 w-5 pb-4'>
                             <div className='d-flex py-3 px-4'>
                                 <h5 className='text-white'>TLP Liquidity pool</h5>

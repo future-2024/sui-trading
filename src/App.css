@@ -14,7 +14,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 35px;
 }
 .wallet-item:hover {
-    background-color: #3d3467;
+    background-color: rgba(0, 0, 0, 0.296);
+    border-color: rgb(238, 116, 230);
+    box-shadow: 0px 5px 20px 5px rgba(179, 93, 196, 0.668);
 }
 hr {
     margin-top: 20px!important;

@@ -104,4 +104,7 @@ p {
     .logo {
         min-width: 38px;
     }
+    .logo-text {
+        font-size: 20px;
+    }
 }

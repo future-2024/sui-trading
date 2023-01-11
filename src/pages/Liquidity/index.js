@@ -121,7 +121,7 @@ const Liquidity = (props) => {
                         {/* <p className='text-gray pt-2'>The TLP pool consists of an assets portfolio; the assets are dynamically allocated for margin trading and third-party DEX mining.</p>            */}
                         <div className='pt-4'>
                             <div className='d-flex flex-wrap'>
-                                <div className={`${isMobile == true ? ``:`w-50`}`}>
+                                <div className={`${isMobile == true ? `w-100`:`w-50`}`}>
                                     <div className='composition mr-2'>
                                         <div className='d-flex'>
                                             <img src={TokenIcon1} className='img-circle' />
@@ -145,7 +145,7 @@ const Liquidity = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={`${isMobile == true ? ``:`w-50`}`}>
+                                <div className={`${isMobile == true ? `w-100`:`w-50`}`}>
                                     <div className={`composition ${isMobile == true ? `mt-3`:`ml-2`}`}>
                                         <div className='d-flex'>
                                             <img src={TokenIcon2} className='img-circle' />
@@ -171,7 +171,7 @@ const Liquidity = (props) => {
                                 </div>
                             </div>
                             <div className='d-flex pt-3'>
-                                <div className={`${isMobile == true ? ``:`w-50`}`}>
+                                <div className={`${isMobile == true ? `w-100`:`w-50`}`}>
                                     <div className='composition mr-2'>
                                         <div className='d-flex'>
                                             <img src={TokenIcon3} className='img-circle' />

@@ -33,7 +33,7 @@ const Market = (props) => {
                     {/* <p className='text-gray d-flex'><span className='text-white'>Contract: </span><span className='text-pink mx-1'> 0x3423...32432</span><FaClipboard className='cursor-pointer mt-1'/></p> */}
                 </div>
                 <div className='d-flex mt-3 flex-wrap'>
-                    <div className={`market-form w-50 window ${isMobile == true ? `p-3`:`p-5`}`}>
+                    <div className={`market-form window ${isMobile == true ? `p-3`:`p-5 w-50`}`}>
                         <div className='market-form-input d-flex justify-content-center mt-3'>
                             <div className={`py-3 w-50 ${switchMarket == 1 && 'active'}`}><p className={`text-center ${switchMarket != 1 ? 'text-grey':'text-white'}`} onClick={() => setSwitchMarket(1)}>Sell TLP</p></div>
                             <div className={`py-3 w-50 ${switchMarket == 2 && 'active'}`}><p className={`text-center ${switchMarket != 2 ? 'text-grey ':'text-white'}`} onClick={() => setSwitchMarket(2)}>Buy TLP</p></div>
@@ -71,7 +71,7 @@ const Market = (props) => {
                         </div>                         
                         <div className='earn-button w-100 text-center py-2 border-radius mb-3'>Connect Wallet</div>
                     </div>
-                    <div className={`w-50 ${isMobile == true ? ``:`pl-2`}`}>
+                    <div className={`${isMobile == true ? `w-100`:`pl-2 w-50`}`}>
                         <div className={`market-form window ${isMobile == true ? `ml-0 mt-3 p-3`:`ml-2 p-5`}`}>
                             <div className='pt-3'>
                                 <div className='d-flex'>
