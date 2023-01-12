@@ -97,7 +97,7 @@ const Market = (props) => {
                                     <h4>Your TLP</h4>
                                 </div>
                                 <div className='d-flex justify-content-between'>
-                                    <p className='text-gray py-2'>Multichain Balance</p>
+                                    <p className='text-gray py-2'>Balance</p>
                                     <p className='py-2'>0.00 TLP</p>
                                 </div>
                                 <div className='d-flex justify-content-between'>

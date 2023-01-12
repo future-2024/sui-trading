@@ -1,7 +1,8 @@
 
 .dchart-innertext-value {
-    display: none;
-    /* color: white; */
+    /* display: none; */
+    fill: rgb(213, 213, 213);
+    font-size: 17px;
 }
 .dchart-innertext-label {
     fill: #e7e7e7;

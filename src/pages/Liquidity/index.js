@@ -93,19 +93,20 @@ const Liquidity = (props) => {
                                         selectedOffset={0}
                                         outerRadius={0.7}
                                         legend={true}
+                                        clickToggle = {false}
                                         colors={["rgb(92, 211, 255)", "rgb(6, 114, 255)", "rgb(254, 142, 14)"]}
                                         data={[
                                             {
                                             label: "SUI",
-                                            value: 15
+                                            value: 15,
                                             },
                                             {
                                             label: "Ethereum",
-                                            value: 30
+                                            value: 50
                                             },
                                             {
                                             label: "Bitcoin",
-                                            value: 45
+                                            value: 35
                                             }
                                         ]}
                                     />
