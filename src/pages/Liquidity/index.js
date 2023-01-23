@@ -79,7 +79,7 @@ const Liquidity = (props) => {
                                 </div>
                             </div>                         
                         </div>
-                        <div className={`market-form window py-5 mt-3 w-49 ${isMobile == true ? `ml-0 px-2`:`ml-3 px-4`}`}>
+                        <div className={`market-form window py-5 mt-3 w-49 ${isMobile == true ? `ml-0 px-2`:`ml-2 px-4`}`}>
                             <div>
                                 <div className='d-flex'>
                                     <h4 className='font-bold'>Liquidity Pool</h4>
